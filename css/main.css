@@ -1,0 +1,123 @@
+/* ==========================================================================
+   minireset.css v0.0.2 | MIT License | github.com/jgthms/minireset.css
+   ========================================================================== */
+
+
+/* ==========================================================================
+   Base styles
+   ========================================================================== */
+    html {
+     box-sizing: border-box;
+    }
+
+    body {
+        background-color: #F7F7F7;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    header {
+        align-items: center;
+        background: #fff url(/img/bg_pattern_slash.gif);
+        /*display: flex;
+        flex-direction: column;
+        justify-content: flex-start;*/
+        height: 100vh;
+        padding: 30px 0;
+        width: 200px;
+    }
+
+
+
+
+
+/* ==========================================================================
+   Header Nav Menu
+   ========================================================================== */
+    header .logo {
+        background: url(/img/logo-pamcy.png) no-repeat center;
+        background-size: contain;
+        border-radius: 50%;
+        height: 120px;
+        margin: 0 auto;
+        width: 120px;
+    }
+
+    header .navbar ul {
+        margin: 20px 0;
+        /*padding: 0 40px 0 0;
+        text-align: right;*/
+    }
+
+    header .navbar ul li {
+        margin: 0 0 15px 0;
+    }
+
+    header .socialbtns ul {
+        /*padding: 0 40px 0 0;
+        text-align: right;*/
+    }
+
+    header .socialbtns ul li {
+        /*display: inline-block;*/
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
