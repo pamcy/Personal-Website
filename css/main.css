@@ -7,7 +7,11 @@
    Base styles
    ========================================================================== */
 :root {
+    --bodyPadding: 2rem;
     --primaryColor: #363636;
+    --highlightColor: #4ECDC4;
+    --narrowScreen: 66rem;
+    --wideScreen: 88rem;
 }
 
 *, :after, :before {
@@ -21,6 +25,22 @@ html {
 body {
     background-color: #F7F7F7;
     font-family: 'Source Sans Pro', sans-serif;``
+}
+
+main {
+    background: #F5F5F5;
+    overflow: auto;
+    /*padding: 4.45rem 2.75rem;*/
+}
+
+section {
+    margin-bottom: 4.45rem;
+    padding-bottom: 4.45rem;
+}
+
+section:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 h1 {
@@ -46,6 +66,7 @@ img {
     max-width: 100%;
 }
 
+
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -53,14 +74,30 @@ img {
     min-width: 100vw;
 }
 
+.container {
+    width: 100%;
+}
 
+.container-wide {
+    max-width: var(--wideScreen);
+}
+
+.container-narrow {
+    margin: 0 auto;
+    max-width: var(--narrowScreen);
+}
 
 /* ==========================================================================
    Header Nav Menu
    ========================================================================== */
 .menu {
-   background: #fff url(/img/bg_pattern_slash.gif);
-   padding: .5rem;
+    align-items: center;
+    background: #fff url(/img/bg_pattern_slash.gif);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: .6rem;
+    position: relative;
 }
 
 .menu .menu-logo {
@@ -68,20 +105,18 @@ img {
     border-radius: 50%;
     cursor: pointer;
     height: 60px;
-    margin: 1rem auto;
+    padding: .2rem;
     width: 60px;
 }
 
 .menu h1 {
     display: none;
     font-size: 1.5rem;
-    text-align: center;
+    margin-bottom: 2rem;
 }
 
 .menu nav.menu-navMain ul.navMain-items {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
 }
 
 .menu nav.menu-navMain ul.navMain-items li {
@@ -90,21 +125,40 @@ img {
 
 .menu nav.menu-navSocial ul.navSocial-items {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
 }
 
 .menu nav.menu-navSocial ul.navSocial-items li {
-
-    margin: 1rem .25rem;
-}
-
-.menu nav.menu-navSocial ul.navSocial-items .navSocial-icons {
-    font-size: 1.25rem;
+    margin: 0 .25rem;
 }
 
 
+/* ==========================================================================
+   Intro Section
+   ========================================================================== */
+.intro {
+    background: rgba(54, 54, 54, 0.9);
+    height: auto;
+    width: 100%;
+}
+.intro .intro-body {
+    color: #fff;
+    padding: var(--bodyPadding);
+}
 
+.intro .intro-body .intro-title {
+    color: var(--highlightColor);
+    font-size: 6.25rem;
+    font-weight: 700;
+}
+
+.intro .intro-body .intro-text {
+    font-size: 1.5rem;
+}
+
+.intro .intro-body .intro-text .intro-city {
+    background-color: var(--highlightColor);
+    border-radius: 3px;
+}
 
 
 
@@ -153,6 +207,11 @@ img {
    ========================================================================== */
 
 @media only screen and (min-width: 840px) {
+    main {
+        flex: 1;
+        /*padding: 4.45rem;*/
+    }
+
     .wrapper {
         height: 100vh;
         flex-direction: row;
@@ -161,8 +220,15 @@ img {
 
     .menu {
         flex: 0 0 15rem;
+        flex-direction: column;
+        justify-content: flex-start;
         max-width: 15rem;
         padding: 2rem 1rem;
+    }
+
+    .menu .menu-logo {
+        height: 120px;
+        width: 120px;
     }
 
     .menu h1 {
@@ -176,5 +242,16 @@ img {
 
     .menu nav.menu-navMain ul.navMain-items li {
         margin: .75rem 0;
+    }
+
+    .menu nav.menu-navSocial ul.navSocial-items {
+        bottom: 2rem;
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%);
+    }
+
+    .menu nav.menu-navSocial ul.navSocial-items .navSocial-icons {
+        font-size: 1.25rem;
     }
 }
