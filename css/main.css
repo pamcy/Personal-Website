@@ -8,9 +8,13 @@
    ========================================================================== */
 :root {
     --bodyPadding: 2rem;
-    --primaryColor: #363636;
+    --gird-8: 66.66667%;
+    --grid-10: 83.33333%;
     --highlightColor: #4ECDC4;
     --narrowScreen: 66rem;
+    --offset-1: 8.33333%;
+    --offset-2: 16.66667%;
+    --primaryColor: #363636;
     --wideScreen: 88rem;
 }
 
@@ -136,23 +140,27 @@ img {
    Intro Section
    ========================================================================== */
 .intro {
-    background: rgba(54, 54, 54, 0.9);
+    background: rgba(54, 54, 54, 0.75);
     height: auto;
     width: 100%;
 }
+
 .intro .intro-body {
     color: #fff;
+    /*margin-left: var(--offset-2);
+    max-width: var(--gird-8);*/
     padding: var(--bodyPadding);
 }
 
 .intro .intro-body .intro-title {
     color: var(--highlightColor);
-    font-size: 6.25rem;
-    font-weight: 700;
+    font-size: 5rem;
+    font-weight: 900;
 }
 
 .intro .intro-body .intro-text {
     font-size: 1.5rem;
+    line-height: 1.5;
 }
 
 .intro .intro-body .intro-text .intro-city {
@@ -161,8 +169,12 @@ img {
 }
 
 
-
-
+/* ==========================================================================
+   Code Section
+   ========================================================================== */
+.code .code-body {
+    padding: var(--bodyPadding);
+}
 
 
 
@@ -218,6 +230,7 @@ img {
         overflow: hidden;
     }
 
+    /*Header Menu*/
     .menu {
         flex: 0 0 15rem;
         flex-direction: column;
@@ -253,5 +266,19 @@ img {
 
     .menu nav.menu-navSocial ul.navSocial-items .navSocial-icons {
         font-size: 1.25rem;
+    }
+
+    /*Intro Section*/
+    .intro .intro-body {
+        margin-left: var(--offset-1);
+        max-width: var(--gird-10);
+    }
+
+    .intro .intro-body .intro-title {
+        font-size: 6.25rem;
+    }
+
+    .intro .intro-body .intro-text {
+        font-size: 1.75rem;
     }
 }
