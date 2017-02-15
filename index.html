@@ -41,9 +41,9 @@
             <main>
                 <!-- Intro Section -->
                 <section class="intro">
-                    <div class="container container-wide">
+                    <div class="section-container section-container-wide">
                         <div class="intro-body">
-                            <span class="intro-title" data-period="2000" data-text='[ "Hello!", "你好!", "こんにちは!", "Hallo!", "Salut!", "Hola!", "Ciao!" ]'>
+                            <span class="intro-title" data-period="2000" data-text='[ "Hello!", "你好!", "Hallo!", "Salut!", "Hola!", "Ciao!" ]'>
                             </span>
                             <p class="intro-text">
                                 I'm Chinyi Pan,<br>
@@ -57,13 +57,24 @@
 
                 <!-- Code Section -->
                 <section class="code">
-                    <div class="container container-wide">
+                    <div class="section-container section-container-wide">
                         <div class="code-body">
                             <h2 class="code-title"># Code Challenges</h2>
                             <p class="code-summary">I started learning swift and kept going for 100 days. Each day, I tried to build something from what I learned. Most projects took a few days to complete. Below is my progression from day one to a hundred in the form of completed projects. A total of 40 projects.</p>
-                            <div class="code-filter"></div>
-                            <div class="code-content">
-                                <div class="code-item">
+                            　
+                            <div class="code-filter">
+                                <span class="filter-title">Show</span>
+                                <button class="filter-btn isActive" type="button" data-ref="filter" data-lauguage="all">All</button>
+                                <button class="filter-btn" type="button" data-ref="filter" data-lauguage="css">CSS</button>
+                                <button class="filter-btn" type="button" data-ref="filter" data-lauguage="javascript">Javascript</button>
+                                <button class="filter-btn" type="button" data-ref="filter" data-lauguage="jquery">jQuery</button>
+                                <button class="filter-btn" type="button" data-ref="filter" data-lauguage="ajax">AJAX</button>
+                                <button class="filter-btn" type="button" data-ref="filter" data-lauguage="bootstrap">Bootstrap</button>
+                                <button class="filter-btn" type="button" data-ref="filter" data-lauguage="responsive">Responsive</button>
+                            </div>
+
+                            <div class="container" data-ref="container">
+                                <div class="item code-item" data-ref="item">
                                     <a href=""><img src="" alt=""></a>
 
                                 </div>
@@ -83,6 +94,7 @@
 
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="js/mixitup.min.js"></script>
         <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

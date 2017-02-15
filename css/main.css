@@ -15,6 +15,8 @@
     --offset-1: 8.33333%;
     --offset-2: 16.66667%;
     --primaryColor: #363636;
+    --subtitleSize: 1.25rem;
+    --textColor: #4a4a4a;
     --wideScreen: 88rem;
 }
 
@@ -28,7 +30,10 @@ html {
 
 body {
     background-color: #F7F7F7;
-    font-family: 'Source Sans Pro', sans-serif;``
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
 }
 
 main {
@@ -47,8 +52,21 @@ section:last-child {
     padding-bottom: 0;
 }
 
-h1 {
+h1, h2 {
     color: var(--primaryColor);
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+p {
+    color: var(--textColor);
 }
 
 a {
@@ -70,6 +88,19 @@ img {
     max-width: 100%;
 }
 
+/*button, input, textarea {
+    appearance: none;
+    border: none;
+    box-shadow: none;
+}*/
+
+button {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+}
+
 
 .wrapper {
     display: flex;
@@ -78,15 +109,15 @@ img {
     min-width: 100vw;
 }
 
-.container {
+.section-container {
     width: 100%;
 }
 
-.container-wide {
+.section-container-wide {
     max-width: var(--wideScreen);
 }
 
-.container-narrow {
+.section-container-narrow {
     margin: 0 auto;
     max-width: var(--narrowScreen);
 }
@@ -115,7 +146,6 @@ img {
 
 .menu h1 {
     display: none;
-    font-size: 1.5rem;
     margin-bottom: 2rem;
 }
 
@@ -159,6 +189,7 @@ img {
 }
 
 .intro .intro-body .intro-text {
+    color: #fff;
     font-size: 1.5rem;
     line-height: 1.5;
 }
@@ -175,6 +206,48 @@ img {
 .code .code-body {
     padding: var(--bodyPadding);
 }
+
+.code .code-body .code-summary {
+    font-size: var(--subtitleSize);
+    font-weight: 300;
+    /*line-height: 1.25;*/
+}
+
+/* Filter */
+.code .code-body .code-filter {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.code .code-body .code-filter .filter-title {
+    margin-right: .3rem;
+}
+
+.code .code-body .code-filter .filter-btn {
+    background: rgba(54, 54, 54, 0.1);
+    border-radius: 3px;
+    font-size: .95rem;
+    margin: .3rem;
+    padding: .25rem .5rem;
+    text-transform: lowercase;
+    transition: background .3s;
+}
+
+.code .code-body .code-filter .filter-btn:hover {
+    background: rgba(54, 54, 54, 0.2);
+}
+
+.code .code-body .code-filter .filter-btn.isActive {
+    background: var(--highlightColor);
+    color: #fff;
+}
+
+.code .code-body .code-filter .filter-btn.isActive:hover {
+    /*background:*/
+}
+
 
 
 
