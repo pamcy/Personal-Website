@@ -30,26 +30,11 @@ html {
 
 body {
     background-color: #F7F7F7;
-    font-family: 'Source Sans Pro', sans-serif;
+    /*font-family: 'Source Sans Pro', sans-serif;*/
+    font-family: 'Raleway', sans-serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-}
-
-main {
-    background: #F5F5F5;
-    overflow: auto;
-    /*padding: 4.45rem 2.75rem;*/
-}
-
-section {
-    margin-bottom: 4.45rem;
-    padding-bottom: 4.45rem;
-}
-
-section:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
 }
 
 h1, h2 {
@@ -62,6 +47,11 @@ h1 {
 
 h2 {
     font-size: 2rem;
+    font-weight: 300;
+}
+
+h3 {
+    font-size: 1.5rem;
     font-weight: 300;
 }
 
@@ -80,6 +70,22 @@ ul {
 ul, li {
     margin: 0;
     padding: 0;
+}
+
+main {
+    background: #F9F9F9;
+    overflow: auto;
+    /*padding: 4.45rem 2.75rem;*/
+}
+
+section {
+    margin-bottom: 4.45rem;
+    padding-bottom: 4.45rem;
+}
+
+section:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 img {
@@ -213,19 +219,20 @@ button {
     /*line-height: 1.25;*/
 }
 
-/* Filter */
-.code .code-body .code-filter {
+/* Filter Buttons */
+.code-filter {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    margin: 2.5rem 0 1.5rem;
 }
 
-.code .code-body .code-filter .filter-title {
+.code-filter .filter-title {
     margin-right: .3rem;
 }
 
-.code .code-body .code-filter .filter-btn {
+.code-filter .filter-btn {
     background: rgba(54, 54, 54, 0.1);
     border-radius: 3px;
     font-size: .95rem;
@@ -235,17 +242,68 @@ button {
     transition: background .3s;
 }
 
-.code .code-body .code-filter .filter-btn:hover {
+.code-filter .filter-btn:hover {
     background: rgba(54, 54, 54, 0.2);
 }
 
-.code .code-body .code-filter .filter-btn.isActive {
+.code-filter .filter-btn.isActive {
     background: var(--highlightColor);
     color: #fff;
 }
 
-.code .code-body .code-filter .filter-btn.isActive:hover {
+.code-filter .filter-btn.isActive:hover {
     /*background:*/
+}
+
+/* Item cards */
+.code-work {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.code-work .code-card {
+    flex-basis: 100%;
+}
+
+.code-work .code-card:not(:first-child) img.card-img {
+    margin-top: 2rem;
+}
+
+.code-work .code-card .card-textarea {
+    background: #fff;
+}
+
+.code-work .code-card .card-textarea .card-alltags {
+    align-items: center;
+    display: flex;
+    font-size: .75rem;
+    margin-bottom: 2rem;
+}
+
+.code-work .code-card .card-textarea .card-alltags .card-tagicon {
+    color: var(--highlightColor);
+}
+
+.code-work .code-card .card-textarea .card-alltags ul.card-tag {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.code-work .code-card .card-textarea .card-alltags ul.card-tag li {
+    background: rgba(54, 54, 54, 0.05);
+    border-radius: 3px;
+    color: #b9bcbc;
+    font-size: .8rem;
+    margin-left: .3rem;
+    padding: .1rem .2rem;
+}
+
+.code-work .code-card .card-textarea button.card-btn {
+    border: 1px solid var(--highlightColor);
+    color: var(--highlightColor);
+    display: block;
+    margin: 0 auto;
+    padding: 1rem 2rem;
 }
 
 
@@ -353,5 +411,15 @@ button {
 
     .intro .intro-body .intro-text {
         font-size: 1.75rem;
+    }
+
+    /*Code Section*/
+    .code-work .code-card {
+        flex-basis: 50%;
+        padding: 1rem 1.5rem;
+    }
+
+    .code-work .code-card img.card-img {
+        margin-top: 1rem;
     }
 }
