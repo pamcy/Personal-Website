@@ -7,10 +7,11 @@
    Base styles
    ========================================================================== */
 :root {
-    --bodyPadding: 2rem;
+    --bodySpacing: 1.25rem;
     --gird-8: 66.66667%;
     --grid-10: 83.33333%;
-    --highlightColor: #4ECDC4;
+    --highlight-default: #4ECDC4;
+    --highlight-hover: #CEF1EE;
     --narrowScreen: 66rem;
     --offset-1: 8.33333%;
     --offset-2: 16.66667%;
@@ -29,7 +30,7 @@ html {
 }
 
 body {
-    background-color: #F7F7F7;
+    background-color: #F5F5F5;
     /*font-family: 'Source Sans Pro', sans-serif;*/
     font-family: 'Raleway', sans-serif;
     font-size: 1rem;
@@ -73,7 +74,6 @@ ul, li {
 }
 
 main {
-    background: #F9F9F9;
     overflow: auto;
     /*padding: 4.45rem 2.75rem;*/
 }
@@ -185,11 +185,11 @@ button {
     color: #fff;
     /*margin-left: var(--offset-2);
     max-width: var(--gird-8);*/
-    padding: var(--bodyPadding);
+    padding: var(--bodySpacing);
 }
 
 .intro .intro-body .intro-title {
-    color: var(--highlightColor);
+    color: var(--highlight-default);
     font-size: 5rem;
     font-weight: 900;
 }
@@ -201,7 +201,7 @@ button {
 }
 
 .intro .intro-body .intro-text .intro-city {
-    background-color: var(--highlightColor);
+    background-color: var(--highlight-default);
     border-radius: 3px;
 }
 
@@ -210,7 +210,7 @@ button {
    Code Section
    ========================================================================== */
 .code .code-body {
-    padding: var(--bodyPadding);
+    margin: var(--bodySpacing);
 }
 
 .code .code-body .code-summary {
@@ -247,7 +247,7 @@ button {
 }
 
 .code-filter .filter-btn.isActive {
-    background: var(--highlightColor);
+    background: var(--highlight-default);
     color: #fff;
 }
 
@@ -262,15 +262,20 @@ button {
 }
 
 .code-work .code-card {
+    background: #fff;
     flex-basis: 100%;
 }
 
-.code-work .code-card:not(:first-child) img.card-img {
+.code-work .code-card:not(:first-child) {
     margin-top: 2rem;
 }
 
 .code-work .code-card .card-textarea {
-    background: #fff;
+    padding: var(--bodySpacing);
+}
+
+.code-work .code-card .card-textarea h3.card-title {
+    margin-top: 0;
 }
 
 .code-work .code-card .card-textarea .card-alltags {
@@ -281,7 +286,7 @@ button {
 }
 
 .code-work .code-card .card-textarea .card-alltags .card-tagicon {
-    color: var(--highlightColor);
+    color: var(--highlight-default);
 }
 
 .code-work .code-card .card-textarea .card-alltags ul.card-tag {
@@ -298,12 +303,46 @@ button {
     padding: .1rem .2rem;
 }
 
+/* View Demo Button */
 .code-work .code-card .card-textarea button.card-btn {
-    border: 1px solid var(--highlightColor);
-    color: var(--highlightColor);
+    background: var(--highlight-default);
+    border-radius: 4px;
+    color: #fff;
     display: block;
     margin: 0 auto;
     padding: 1rem 2rem;
+    position: relative;
+    transition: all 800ms ease;
+}
+
+.code-work .code-card .card-textarea button.card-btn:hover {
+    background: #fff;
+    color: var(--highlight-default);
+}
+
+.code-work .code-card .card-textarea button.card-btn:before,
+.code-work .code-card .card-textarea button.card-btn:after {
+    background: var(--highlight-default);
+    content: '';
+    height: 2px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: all 400ms ease;
+    width: 0;
+}
+
+.code-work .code-card .card-textarea button.card-btn:after {
+    bottom: 0;
+    left: 0;
+    right: inherit;
+    top: inherit;
+}
+
+.code-work .code-card .card-textarea button.card-btn:hover:before,
+.code-work .code-card .card-textarea button.card-btn:hover:after {
+    transition: all 800ms ease;
+    width: 100%;
 }
 
 
@@ -348,11 +387,26 @@ button {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+@media all and (min-width: 768px) {
 
-@media only screen and (min-width: 840px) {
+    /*Intro Section*/
+    .intro .intro-body {
+        padding: calc(var(--bodySpacing) * 2);
+    }
+
+    /* Code Section */
+    .code .code-body {
+        margin: calc(var(--bodySpacing) * 2);
+    }
+
+    .code-work .code-card .card-textarea {
+        padding: calc(var(--bodySpacing) * 1.25);
+    }
+}
+
+@media all and (min-width: 992px) {
     main {
         flex: 1;
-        /*padding: 4.45rem;*/
     }
 
     .wrapper {
@@ -413,13 +467,22 @@ button {
         font-size: 1.75rem;
     }
 
-    /*Code Section*/
+    /* Code Section */
     .code-work .code-card {
-        flex-basis: 50%;
-        padding: 1rem 1.5rem;
+        flex-basis: 45%;
+        margin-bottom: calc(var(--bodySpacing) * 2);
+        margin-right: calc(var(--bodySpacing) * 2);
     }
 
-    .code-work .code-card img.card-img {
-        margin-top: 1rem;
+    .code-work .code-card:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    .code-work .code-card:not(:first-child) {
+        margin-top: 0;
+    }
+
+    .code-work .code-card:last-child {
+        margin-bottom: 0;
     }
 }
