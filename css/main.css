@@ -7,6 +7,7 @@
    Base styles
    ========================================================================== */
 :root {
+    --about-linkColor: #245E5A;
     --bodySpacing: 1.25rem;
     --gird-8: 66.66667%;
     --grid-10: 83.33333%;
@@ -33,6 +34,7 @@ body {
     background-color: #F5F5F5;
     /*font-family: 'Source Sans Pro', sans-serif;*/
     font-family: 'Raleway', sans-serif;
+    /*font-family: 'Lato', sans-serif;*/
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -115,15 +117,15 @@ button {
     min-width: 100vw;
 }
 
-.section-container {
+.container {
     width: 100%;
 }
 
-.section-container-wide {
+.container-wide {
     max-width: var(--wideScreen);
 }
 
-.section-container-narrow {
+.container-narrow {
     margin: 0 auto;
     max-width: var(--narrowScreen);
 }
@@ -228,8 +230,19 @@ button {
     margin: 2.5rem 0 1.5rem;
 }
 
-.code-filter .filter-title {
+.code-filter label.filter-title {
     margin-right: .3rem;
+    position: relative;
+}
+
+.code-filter label.filter-title:after {
+    background: #F5F5F5;
+    border: 1px dashed var(--primaryColor);
+    content: '';
+    left: 0;
+    position: absolute;
+    top: 1.25rem;
+    width: 2.5rem;
 }
 
 .code-filter .filter-btn {
@@ -259,6 +272,7 @@ button {
 .code-work {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: calc(var(--bodySpacing) * 2);
 }
 
 .code-work .code-card {
@@ -345,14 +359,92 @@ button {
     width: 100%;
 }
 
+/* Show More Button */
+.code-body button.loadmore-btn {
+    border: 2px solid var(--highlight-default);
+    display: block;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.code-body button.loadmore-btn .loadmore-icon {
+    display: inline-block;;
+    padding-left: .5rem;
+}
+
+/* ==========================================================================
+   About Section
+   ========================================================================== */
+.about {
+    background: rgba(78, 205, 196, .2);
+}
+
+.about .about-body {
+    padding: var(--bodySpacing);
+}
 
 
+/* About Left Main Section */
+.about-mainContent {
 
+}
 
+.about-mainContent h3.about-subtitle {
+    margin-bottom: 1rem;
+}
 
+.about-mainContent p.about-description {
+    line-height: 2.5;
+}
 
+.about-mainContent p.about-description span.about-underline {
+    border-bottom: 2px solid var(--highlight-default);
+    min-width: 75%;
+    position: relative;
+}
 
+.about-mainContent p.about-description span.underline-title {
+    font-size: .75rem;
+    font-weight: 600;
+    left: 0;
+    position: absolute;
+    top: .95rem;
+}
 
+/* About Right Links Section */
+.about-links {
+
+}
+
+.about-links label {
+    color:#743131;
+    font-weight: 600;
+}
+
+.about-links ul li a {
+    color: var(--about-linkColor);
+}
+
+.about-links ul li a::before {
+    color: #cca300;
+    content: "\f005";
+    font-family: FontAwesome;
+    padding-right: .3rem;
+}
+
+.about-links ul li a::after {
+    color: var(--about-linkColor);
+    content: "\f08e";
+    font-family: FontAwesome;
+    font-size: .7rem;
+    padding-left: .3rem;
+    position: relative;
+    top: -3px;
+}
+
+.about-links ul li a:hover {
+    border-bottom: 1px solid var(--about-linkColor);
+}
 
 
 
@@ -399,9 +491,18 @@ button {
         margin: calc(var(--bodySpacing) * 2);
     }
 
+    .code-work {
+        margin-bottom: calc(var(--bodySpacing) * 3);
+    }
+
     .code-work .code-card .card-textarea {
         padding: calc(var(--bodySpacing) * 1.25);
     }
+
+    .code-body button.loadmore-btn {
+        padding: 1rem 1.6rem;
+    }
+
 }
 
 @media all and (min-width: 992px) {
@@ -469,7 +570,7 @@ button {
 
     /* Code Section */
     .code-work .code-card {
-        flex-basis: 45%;
+        flex-basis: calc(50% - var(--bodySpacing) * 2);
         margin-bottom: calc(var(--bodySpacing) * 2);
         margin-right: calc(var(--bodySpacing) * 2);
     }

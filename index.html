@@ -12,6 +12,7 @@
         <!-- Stylesheets -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900" rel="stylesheet"> -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
+        <!-- <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet"> -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
@@ -42,7 +43,7 @@
             <main>
                 <!-- Intro Section -->
                 <section class="intro">
-                    <div class="section-container section-container-wide">
+                    <div class="container container-wide">
                         <div class="intro-body">
                             <span class="intro-title" data-period="2000" data-text='[ "Hello!", "你好!", "Hallo!", "Salut!", "Hola!", "Ciao!" ]'>
                             </span>
@@ -58,14 +59,15 @@
 
                 <!-- Code Section -->
                 <section class="code">
-                    <div class="section-container section-container-wide">
+                    <div class="container container-wide">
                         <div class="code-body">
-                            <h2 class="code-title"># Code Challenges</h2>
+                            <!-- Code Summary -->
+                            <h2># Code Challenges</h2>
                             <p class="code-summary">I started learning swift and kept going for 100 days. Each day, I tried to build something from what I learned. Most projects took a few days to complete. Below is my progression from day one to a hundred in the form of completed projects. A total of 40 projects.</p>
 
                             <!-- Code Filter Area -->
                             <nav class="code-filter">
-                                <span class="filter-title">Show</span>
+                                <label class="filter-title">Show</label>
                                 <button class="filter-btn isActive" type="button" data-ref="filter" data-lauguage="all">All</button>
                                 <button class="filter-btn" type="button" data-ref="filter" data-lauguage="css">CSS</button>
                                 <button class="filter-btn" type="button" data-ref="filter" data-lauguage="javascript">Javascript</button>
@@ -76,8 +78,7 @@
                             </nav>
 
                             <!-- Code Cards Area -->
-                            <!-- MixItUp Plugin is applied to a "container" of target elements -->
-                            <div class="container code-work" data-ref="container">
+                            <div class="code-work" data-ref="code-work">
                                 <div class="code-card" data-ref="card">
                                     <a href=""><img class="card-img" src="https://unsplash.it/1290/960/?random" alt=""></a>
                                     <div class="card-textarea">
@@ -197,10 +198,44 @@
                                         <button class="card-btn">View Demo</button>
                                     </div>
                                 </div>
-                            </div> <!-- ^.container .code-work -->
+                            </div> <!-- ^.code-work -->
+
+                            <!-- Code Load More Button -->
+                            <button class="loadmore-btn" type="button">Show More Projects
+                                <i class="loadmore-icon fa fa-chevron-down"></i>
+                            </button>
                         </div> <!-- ^.code-body -->
-                    </div> <!-- ^.section-container .section-container-wide -->
+                    </div> <!-- ^.container .container-wide -->
                 </section> <!-- ^.code -->
+
+                <!-- About Section -->
+                <section class="about">
+                    <div class="container container-wide">
+                        <div class="about-body">
+                            <div class="about-mainContent">
+                                <h2># About</h2>
+                                <h3 class="about-subtitle">Who am I</h3>
+                                <p class="about-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud <span class="about-underline">exercitation<span class="underline-title">interest</span></span> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <h3 class="about-subtitle">How do I learn?</h3>
+                                <p class="about-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <h3 class="about-subtitle">About this website</h3>
+                                <p class="about-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                            <div class="about-links">
+                                <div class="links-youtube">
+                                    <label>Youtube Channel</label>
+                                    <ul>
+                                        <li><a href="">DevTips</a></li>
+                                        <li><a href="">Netninja</a></li>
+                                        <li>Wesbos</li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </main>
         </div> <!-- ^.wrapper -->
 
