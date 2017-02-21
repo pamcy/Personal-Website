@@ -418,7 +418,9 @@ button {
 
 .about-links label {
     color:#743131;
+    display: block;
     font-weight: 600;
+    margin: .8rem 0 .3rem;
 }
 
 .about-links ul li a {
@@ -444,6 +446,12 @@ button {
 
 .about-links ul li a:hover {
     border-bottom: 1px solid var(--about-linkColor);
+}
+
+.about-links ul li a.heart-icon:before {
+    color: #ff8080;
+    content: '\f004';
+    font-family: FontAwesome;
 }
 
 
@@ -479,7 +487,7 @@ button {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-@media all and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
 
     /*Intro Section*/
     .intro .intro-body {
@@ -505,7 +513,7 @@ button {
 
 }
 
-@media all and (min-width: 992px) {
+@media only screen and (min-width: 992px) {
     main {
         flex: 1;
     }
