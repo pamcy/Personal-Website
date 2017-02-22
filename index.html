@@ -212,8 +212,8 @@
                 <section class="about">
                     <div class="container container-wide">
                         <div class="about-body">
+                            <h2># About</h2>
                             <div class="about-mainContent">
-                                <h2># About</h2>
                                 <h3 class="about-subtitle">Who am I</h3>
                                 <p class="about-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud <span class="about-underline">exercitation<span class="underline-title">interest</span></span> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                                 <h3 class="about-subtitle">How do I learn?</h3>
@@ -247,10 +247,69 @@
                                         <li><a href="https://blog.garstasio.com/you-dont-need-jquery/" target="_blank">You Don't Need jQuery!</a></li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> <!-- ^.about-links -->
+                        </div> <!-- ^.about-body -->
+                    </div> <!-- ^.container .container-wide -->
+                </section>
+
+                <section class="contact">
+                    <div class="container container-wide">
+                        <div class="contact-body">
+                            <h2># Contact</h2>
+                            <p class="contact-summary">
+                                I'm focused and friendly. You can find me sharing my projects on github, interesting links on twitter, or random thoughts on medium.
+                            </p>
+                            <form action="" class="contact-form">
+                                <div class="form-header-icon"></div>
+
+                                <!-- Form Header -->
+                                <div class="form-header">
+                                    <div class="form-row">
+                                        <label for="email">From: </label>
+                                        <input type="email" class="form-fontSize" id="email" name="email" placeholder="your@email.com" required>
+                                    </div>
+                                    <div class="form-row">
+                                        <label>To: </label>
+                                        <p class="form-fontSize" >Chinyi Pam</p>
+                                    </div>
+                                    <div class="form-row">
+                                        <label for="subject">Subject: </label>
+                                        <select id="form-subject" name="subject" required>
+                                            <option value="Pick a subject" selected disabled>Pick a subject</option>
+                                            <option value="Hello">Hello!</option>
+                                            <option value="Let's work together">Let's work together!</option>
+                                        </select>
+                                    </div>
+                                </div> <!-- ^.form-header -->
+
+                                <!-- Form Subject 1 Body: Hi -->
+                                <div class="form-body form-body-hi">
+                                    Hi Pamcy,
+                                    <br>
+                                    <textarea name="form-body-message" rows="5" placeholder="Your message here"></textarea>
+                                </div>
+
+                                <!-- Form Subject 2 Body: Work -->
+                                <div class="form-body form-body-work">
+                                    Hi Pamcy,
+                                    <br>
+                                    I'm from <input type="text" name="company" placeholder="Your Company Name">, we are looking for Front-End Developer just like you. Here are some details of this job.
+                                    <textarea name="form-body-message" rows="5" placeholder="What you would do"></textarea>
+                                </div>
+
+                                <!-- Form Footer -->
+                                <div class="form-footer">
+                                    Best Regards,
+                                    <br>
+                                    <input type="text" name="fullname" placeholder="Your Name">
+                                </div>
+
+                                <button type="submit">Send</button>
+                            </form>
                         </div>
                     </div>
                 </section>
+
             </main>
         </div> <!-- ^.wrapper -->
 

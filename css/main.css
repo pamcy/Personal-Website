@@ -9,6 +9,7 @@
 :root {
     --about-linkColor: #245E5A;
     --bodySpacing: 1.25rem;
+    --form-inputSize: 1.125rem;
     --gird-8: 66.66667%;
     --grid-10: 83.33333%;
     --highlight-default: #4ECDC4;
@@ -22,7 +23,7 @@
     --wideScreen: 88rem;
 }
 
-*, :after, :before {
+*, ::after, ::before {
    box-sizing: border-box;
 }
 
@@ -96,11 +97,13 @@ img {
     max-width: 100%;
 }
 
-/*button, input, textarea {
+input, select, textarea {
     appearance: none;
+    background: transparent;
     border: none;
     box-shadow: none;
-}*/
+    outline: none;
+}
 
 button {
     background: none;
@@ -334,8 +337,8 @@ button {
     color: var(--highlight-default);
 }
 
-.code-work .code-card .card-textarea button.card-btn:before,
-.code-work .code-card .card-textarea button.card-btn:after {
+.code-work .code-card .card-textarea button.card-btn::before,
+.code-work .code-card .card-textarea button.card-btn::after {
     background: var(--highlight-default);
     content: '';
     height: 2px;
@@ -353,8 +356,8 @@ button {
     top: inherit;
 }
 
-.code-work .code-card .card-textarea button.card-btn:hover:before,
-.code-work .code-card .card-textarea button.card-btn:hover:after {
+.code-work .code-card .card-textarea button.card-btn:hover::before,
+.code-work .code-card .card-textarea button.card-btn:hover::after {
     transition: all 800ms ease;
     width: 100%;
 }
@@ -380,15 +383,12 @@ button {
 }
 
 .about .about-body {
+    display: flex;
+    flex-wrap: wrap;
     padding: var(--bodySpacing);
 }
 
-
 /* About Left Main Section */
-.about-mainContent {
-
-}
-
 .about-mainContent h3.about-subtitle {
     margin-bottom: 1rem;
 }
@@ -412,10 +412,6 @@ button {
 }
 
 /* About Right Links Section */
-.about-links {
-
-}
-
 .about-links label {
     color:#743131;
     display: block;
@@ -448,12 +444,51 @@ button {
     border-bottom: 1px solid var(--about-linkColor);
 }
 
-.about-links ul li a.heart-icon:before {
+.about-links ul li a.heart-icon::before {
     color: #ff8080;
     content: '\f004';
     font-family: FontAwesome;
 }
 
+/* ==========================================================================
+   Contact Section
+   ========================================================================== */
+.contact .contact-body {
+    padding: var(--bodySpacing);
+}
+
+form.contact-form {
+    background: #f1f1fa;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+form.contact-form .form-header-icon {
+    background: url(/img/email.png) no-repeat;
+    background-size: 32px 32px;
+    height: 32px;
+    width: 32px;
+}
+
+form.contact-form .form-header .form-fontSize {
+    font-size: var(--form-inputSize);
+}
+
+form.contact-form input,
+form.contact-form select,
+form.contact-form textarea {
+    border-bottom: 1px solid transparent;
+    color: var(--about-linkColor);
+    display: inline;
+    font-size: var(--form-inputSize);
+    min-width: 150px;
+    width: auto;
+}
+
+form.contact-form textarea {
+    width: 100%;
+}
 
 
 /* ==========================================================================
@@ -594,4 +629,24 @@ button {
     .code-work .code-card:last-child {
         margin-bottom: 0;
     }
+
+    /* About Section */
+    .about .about-body {
+        padding: calc(var(--bodySpacing) * 2);
+    }
+
+    .about .about-body h2 {
+        flex: 1 1 100%;
+    }
+
+    .about-mainContent {
+        flex: 3;
+    }
+
+    .about-links {
+        flex: 1;
+        margin: 1.125rem 0 0 1.875rem;
+    }
+
+
 }
