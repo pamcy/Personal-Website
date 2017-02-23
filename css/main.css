@@ -61,6 +61,8 @@ h3 {
 
 p {
     color: var(--textColor);
+    /*margin: 0;
+    border: 0;*/
 }
 
 a {
@@ -99,10 +101,15 @@ img {
 
 input, select, textarea {
     appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
     background: transparent;
-    border: none;
+    border: 0;
     box-shadow: none;
     outline: none;
+    padding: 0;
 }
 
 button {
@@ -181,7 +188,12 @@ button {
    Intro Section
    ========================================================================== */
 .intro {
-    background: rgba(54, 54, 54, 0.75);
+
+    background: url(/img/bg-test.jpg)
+    no-repeat center;
+    /*background: rgba(255, 255, 255, 0.2);*/
+    background-size: cover;
+    /*filter: opacity(0.95);*/
     height: auto;
     width: 100%;
 }
@@ -457,38 +469,147 @@ button {
     padding: var(--bodySpacing);
 }
 
-form.contact-form {
+.contact .contact-body p.contact-summary {
+    font-size: var(--subtitleSize);
+    font-weight: 300;
+}
+
+/* Form Base Styles */
+.contact-form {
     background: #f1f1fa;
+    /*background: rgb(225, 233, 231);*/
     border-radius: 3px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    margin-top: 2.5rem;
     overflow: hidden;
+    padding: var(--bodySpacing);
 }
 
-form.contact-form .form-header-icon {
-    background: url(/img/email.png) no-repeat;
-    background-size: 32px 32px;
-    height: 32px;
-    width: 32px;
-}
-
-form.contact-form .form-header .form-fontSize {
-    font-size: var(--form-inputSize);
-}
-
-form.contact-form input,
-form.contact-form select,
-form.contact-form textarea {
-    border-bottom: 1px solid transparent;
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
     color: var(--about-linkColor);
     display: inline;
     font-size: var(--form-inputSize);
-    min-width: 150px;
+    min-width: 9.5rem;
     width: auto;
 }
 
-form.contact-form textarea {
+.contact-form textarea {
+    line-height: 1.5;
     width: 100%;
 }
+
+.contact-form p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Form Headr Icon */
+.contact-form .form-header-icon {
+    background: url(/img/email.svg) no-repeat left center;
+    background-size: 48px 48px;
+    border-bottom: 1px solid #e6e6e6;
+    min-height: 3.25rem;
+}
+
+/* Form Header */
+.contact-form .form-header {
+    border-bottom: 1px dashed #e6e6e6;
+    padding: 1rem 0;
+}
+
+.contact-form .form-header .form-row {
+    align-items: baseline;
+    display: flex;
+}
+
+.contact-form .form-header .form-row label,
+.contact-form .form-header .form-row .form-inputValue {
+    line-height: 1.5;
+    vertical-align: baseline;
+}
+
+.contact-form .form-header .form-row label {
+    width: 25%;
+}
+
+.contact-form .form-header .form-row .form-inputValue {
+    font-size: var(--form-inputSize);
+    width: 75%%;
+}
+
+/* Form Body */
+.contact-form .form-body {
+    padding: 1rem 0;
+}
+
+.contact-form .form-body input,
+.contact-form .form-footer input {
+    border-bottom: 1px dashed rgb(202, 181, 204);
+}
+
+.contact-form .form-body input {
+    margin: 0 3px;
+    padding: 2px 5px;
+    text-align: center;
+}
+
+/* Form Footer */
+.contact-form .form-footer input {
+    padding: 2px 0 2px;
+}
+
+.contact-form .form-footer .form-send-btn {
+    margin: 2rem 0 1rem;
+    text-align: right;
+}
+
+.contact-form .form-footer .form-send-btn button.send-btn {
+    background: var(--highlight-default);
+    box-shadow: 1px 1px rgba(0, 0, 0, .1);
+    border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+    overflow: hidden;
+    padding:  .8rem 1.2rem;
+    position: relative;
+}
+
+.contact-form .form-footer .form-send-btn button.send-btn::before {
+    content: '\f1d8';
+    display: block;
+    font-family: FontAwesome;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: -100%;
+    padding: .8rem;
+    width: 100%;
+}
+
+.contact-form .form-footer .form-send-btn button.send-btn span.send-btn-text {
+    bottom: 0px;
+    display: block;
+    position: relative;
+    transition: .25s ease-in-out;
+}
+
+.contact-form .form-footer .form-send-btn button.send-btn:hover {
+    background: #5ED1C9;
+}
+
+.contact-form .form-footer .form-send-btn button.send-btn:hover span.send-btn-text {
+    bottom: -56px;
+}
+
+.contact-form .form-footer .form-send-btn button.send-btn:hover::before {
+    top: 0%;
+}
+
+/* ==========================================================================
+   Footer Section
+   ========================================================================== */
 
 
 /* ==========================================================================
@@ -544,6 +665,13 @@ form.contact-form textarea {
 
     .code-body button.loadmore-btn {
         padding: 1rem 1.6rem;
+    }
+
+    /* Contact Section */
+    .contact-form {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
     }
 
 }
@@ -648,5 +776,14 @@ form.contact-form textarea {
         margin: 1.125rem 0 0 1.875rem;
     }
 
+    /* Contact Section */
+    .contact .contact-body {
+        margin: calc(var(--bodySpacing) * 2);
+    }
 
+    .contact-form {
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+    }
 }

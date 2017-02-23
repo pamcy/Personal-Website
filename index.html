@@ -21,7 +21,7 @@
         <div class="wrapper">
             <!-- Header Nav Menu -->
             <header class="menu">
-                <a href=""><img src="img/logo-pamcy.png" class="menu-logo" alt=""></a>
+                <a href=""><img src="img/logo-pamcy.svg" class="menu-logo" alt=""></a>
                 <h1><a href="">{ Pamcy.io }</a></h1>
                 <nav class="menu-navMain">
                     <ul class="navMain-items">
@@ -49,7 +49,7 @@
                             </span>
                             <p class="intro-text">
                                 I'm Chinyi Pan,<br>
-                                a <i class="fa fa-code"></i> Front-End Developer <i class="fa fa-code"></i>, <i class="fa fa-laptop"></i> Digital Nomad <i class="fa fa-laptop"></i><br>
+                                a <i class="fa fa-code"></i> Front-End Developer <i class="fa fa-code"></i>, <i class="fa fa-tree"></i> Wilderness Photographer <i class="fa fa-tree"></i><br>
                                 based in the active city of <span class="intro-city">Taipei</span>, Taiwan.<br>
                                 Let's be friends!
                             </p>
@@ -260,56 +260,61 @@
                                 I'm focused and friendly. You can find me sharing my projects on github, interesting links on twitter, or random thoughts on medium.
                             </p>
                             <form action="" class="contact-form">
+                                <!-- Form Headr Icon -->
                                 <div class="form-header-icon"></div>
 
                                 <!-- Form Header -->
                                 <div class="form-header">
                                     <div class="form-row">
-                                        <label for="email">From: </label>
-                                        <input type="email" class="form-fontSize" id="email" name="email" placeholder="your@email.com" required>
+                                        <label for="email">From:</label>
+                                        <input type="email" class="form-inputValue" id="email" name="email" placeholder="Your@email.com" required>
                                     </div>
                                     <div class="form-row">
-                                        <label>To: </label>
-                                        <p class="form-fontSize" >Chinyi Pam</p>
+                                        <label>To:</label>
+                                        <p class="form-inputValue" >Chinyi Pam</p>
                                     </div>
                                     <div class="form-row">
                                         <label for="subject">Subject: </label>
-                                        <select id="form-subject" name="subject" required>
-                                            <option value="Pick a subject" selected disabled>Pick a subject</option>
+                                        <select class="form-inputValue" id="form-subject" name="subject" required>
+                                            <option value="Pick a subject" selected disabled>Choose a subject</option>
                                             <option value="Hello">Hello!</option>
                                             <option value="Let's work together">Let's work together!</option>
                                         </select>
                                     </div>
-                                </div> <!-- ^.form-header -->
+                                </div>
 
                                 <!-- Form Subject 1 Body: Hi -->
-                                <div class="form-body form-body-hi">
+                                <!-- <div class="form-body form-body-hi">
                                     Hi Pamcy,
                                     <br>
                                     <textarea name="form-body-message" rows="5" placeholder="Your message here"></textarea>
-                                </div>
+                                </div> -->
 
                                 <!-- Form Subject 2 Body: Work -->
                                 <div class="form-body form-body-work">
                                     Hi Pamcy,
                                     <br>
-                                    I'm from <input type="text" name="company" placeholder="Your Company Name">, we are looking for Front-End Developer just like you. Here are some details of this job.
-                                    <textarea name="form-body-message" rows="5" placeholder="What you would do"></textarea>
+                                    I'm from <input type="text" name="company" placeholder="Your Company Name" required>, we are looking for Front-End Developer just like you. Here are some details of this job.
+                                    <textarea name="form-body-message" rows="5" placeholder="You are responsible for..." required></textarea>
                                 </div>
 
                                 <!-- Form Footer -->
                                 <div class="form-footer">
                                     Best Regards,
                                     <br>
-                                    <input type="text" name="fullname" placeholder="Your Name">
+                                    <input type="text" name="fullname" placeholder="Your Name" required>
+                                    <div class="form-send-btn">
+                                        <button class="send-btn" type="submit">
+                                            <span class="send-btn-text">Send Mail</span>
+                                        </button>
+                                    </div>
                                 </div>
-
-                                <button type="submit">Send</button>
                             </form>
                         </div>
                     </div>
                 </section>
 
+                <footer>Copyright &copy; 2017 Pamcy.io</footer>
             </main>
         </div> <!-- ^.wrapper -->
 
