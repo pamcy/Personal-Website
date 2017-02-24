@@ -1,4 +1,5 @@
-// Auto Typing Hello
+// Intro Section //
+// Auto Typing Hello //
 var TitleRotate = function(el, typing, period) {
     this.el = el;
     this.typing = typing;
@@ -7,7 +8,7 @@ var TitleRotate = function(el, typing, period) {
     this.text = '';
     this.tick();
     this.isDeleting = false;
-    console.log(this);
+    // console.log(this);
 }
 
 TitleRotate.prototype.tick = function() {
@@ -60,3 +61,22 @@ window.onload = function() {
     css.innerHTML = '.intro-title > .wrap { border-right: .5rem solid #4ECDC4}';
     document.body.appendChild(css);
 }
+
+// Contact Section //
+// Change The Form Subject //
+$(document).ready(function() {
+
+    $('#form-subject').on('change', function() {
+
+        var option = $('#form-subject option:selected').val(),
+            formBodyHi = $('.contact-form').find('.form-body-hi'),
+            formBodyWork = $('.contact-form').find('.form-body-work');
+
+        if (option === '1') {
+            formBodyHi.css('display', 'block').siblings('.form-body').css('display', 'none');
+        } else if (option === '2') {
+            formBodyWork.css('display', 'block').siblings('.form-body').css('display', 'none');
+        }
+    });
+
+});

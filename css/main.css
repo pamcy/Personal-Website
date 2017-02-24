@@ -149,60 +149,62 @@ button {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: .6rem;
-    position: relative;
+    padding: .3rem 1.25rem;
 }
 
-.menu .menu-logo {
-    background-size: contain;
-    border-radius: 50%;
-    cursor: pointer;
+.menu .menu-body {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.menu .menu-body .menu-logo a {
+    background: url(/img/logo-pamcy.svg) no-repeat center;
+    display: block;
     height: 60px;
-    padding: .2rem;
+    text-indent:-9999px;
     width: 60px;
 }
 
-.menu h1 {
+.menu .menu-body nav.menu-navMain h1 {
     display: none;
-    margin-bottom: 2rem;
 }
 
-.menu nav.menu-navMain ul.navMain-items {
+.menu .menu-body nav.menu-navMain ul.navMain-items {
     display: flex;
+    /*justify-content: flex-end;*/
 }
 
-.menu nav.menu-navMain ul.navMain-items li {
-    margin: 0 .4rem;
+.menu .menu-body nav.menu-navMain ul.navMain-items li {
+    padding-left: 1rem;
 }
 
-.menu nav.menu-navSocial ul.navSocial-items {
-    display: flex;
+.menu .menu-body nav.menu-navMain ul.navMain-items li:first-child {
+    padding-left: 0;
 }
 
-.menu nav.menu-navSocial ul.navSocial-items li {
-    margin: 0 .25rem;
+.menu nav.menu-navSocial {
+    display: none;
 }
-
 
 /* ==========================================================================
    Intro Section
    ========================================================================== */
 .intro {
-
-    background: url(/img/bg-test.jpg)
-    no-repeat center;
-    /*background: rgba(255, 255, 255, 0.2);*/
+    background: url(/img/bg-intro.jpg)
+    no-repeat right center;
     background-size: cover;
-    /*filter: opacity(0.95);*/
+    display: flex;
     height: auto;
     width: 100%;
 }
 
 .intro .intro-body {
+    align-items: center;
     color: #fff;
-    /*margin-left: var(--offset-2);
-    max-width: var(--gird-8);*/
     padding: var(--bodySpacing);
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
 }
 
 .intro .intro-body .intro-title {
@@ -555,6 +557,15 @@ button {
     text-align: center;
 }
 
+.contact-form .form-body p.form-body-description {
+    font-size: .8rem;
+}
+
+.contact-form .form-body-hi,
+.contact-form .form-body-work {
+    display: none;
+}
+
 /* Form Footer */
 .contact-form .form-footer input {
     padding: 2px 0 2px;
@@ -643,9 +654,39 @@ button {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+
+@media only screen and (min-width: 500px) {
+    /* Header Nav Menu */
+    .menu .menu-body {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu .menu-body nav.menu-navMain ul.navMain-items {
+        margin-left: 1rem;
+    }
+
+    .menu nav.menu-navSocial {
+        display: block;
+    }
+
+    .menu nav.menu-navSocial ul.navSocial-items {
+        display: flex;
+    }
+
+    .menu nav.menu-navSocial ul.navSocial-items li {
+        padding-left: .5rem;
+    }
+
+    .menu nav.menu-navSocial ul.navSocial-items li:first-child {
+        padding-left: 0;
+    }
+}
+
 @media only screen and (min-width: 768px) {
 
-    /*Intro Section*/
+    /* Intro Section */
     .intro .intro-body {
         padding: calc(var(--bodySpacing) * 2);
     }
@@ -667,7 +708,16 @@ button {
         padding: 1rem 1.6rem;
     }
 
+    /* About Section */
+    .about .about-body {
+        padding: calc(var(--bodySpacing) * 2);
+    }
+
     /* Contact Section */
+    .contact .contact-body {
+        padding: calc(var(--bodySpacing) * 2);
+    }
+
     .contact-form {
         margin-left: auto;
         margin-right: auto;
@@ -687,16 +737,47 @@ button {
         overflow: hidden;
     }
 
-    /*Header Menu*/
+    /* Header Nav Menu */
     .menu {
         flex: 0 0 15rem;
         flex-direction: column;
-        justify-content: flex-start;
         max-width: 15rem;
-        padding: 2rem 1rem;
+        padding: 2rem;
     }
 
-    .menu .menu-logo {
+    .menu .menu-body {
+        flex-direction: column;
+    }
+
+    .menu .menu-body .menu-logo a {
+        height: 120px;
+        margin: 0 auto;
+        width: 120px;
+    }
+
+    .menu .menu-body nav.menu-navMain h1 {
+        display: block;
+    }
+
+    .menu .menu-body nav.menu-navMain ul.navMain-items {
+        align-items: center;
+        flex-direction: column;
+        margin: 1.25rem 0;
+    }
+
+    .menu .menu-body nav.menu-navMain ul.navMain-items li {
+        padding: 1rem 0;
+    }
+
+    .menu nav.menu-navSocial ul.navSocial-items li {
+        padding-left: .8rem;
+    }
+
+    .menu nav.menu-navSocial ul.navSocial-items li .navSocial-icons {
+        font-size: 1.25rem;
+    }
+
+    /*.menu .menu-logo {
         height: 120px;
         width: 120px;
     }
@@ -723,7 +804,7 @@ button {
 
     .menu nav.menu-navSocial ul.navSocial-items .navSocial-icons {
         font-size: 1.25rem;
-    }
+    }*/
 
     /*Intro Section*/
     .intro .intro-body {
