@@ -313,7 +313,7 @@ button {
     align-items: center;
     display: flex;
     font-size: .75rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .code-work .code-card .card-textarea .card-alltags .card-tagicon {
@@ -335,24 +335,24 @@ button {
 }
 
 /* View Demo Button */
-.code-work .code-card .card-textarea button.card-btn {
+.code-work .code-card button.card-btn {
     background: var(--highlight-default);
     border-radius: 4px;
     color: #fff;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 2rem;
     padding: 1rem 2rem;
     position: relative;
     transition: all 800ms ease;
 }
 
-.code-work .code-card .card-textarea button.card-btn:hover {
+.code-work .code-card button.card-btn:hover {
     background: #fff;
     color: var(--highlight-default);
 }
 
-.code-work .code-card .card-textarea button.card-btn::before,
-.code-work .code-card .card-textarea button.card-btn::after {
+.code-work .code-card button.card-btn::before,
+.code-work .code-card button.card-btn::after {
     background: var(--highlight-default);
     content: '';
     height: 2px;
@@ -363,15 +363,15 @@ button {
     width: 0;
 }
 
-.code-work .code-card .card-textarea button.card-btn:after {
+.code-work .code-card button.card-btn:after {
     bottom: 0;
     left: 0;
     right: inherit;
     top: inherit;
 }
 
-.code-work .code-card .card-textarea button.card-btn:hover::before,
-.code-work .code-card .card-textarea button.card-btn:hover::after {
+.code-work .code-card button.card-btn:hover::before,
+.code-work .code-card button.card-btn:hover::after {
     transition: all 800ms ease;
     width: 100%;
 }
@@ -723,7 +723,6 @@ button {
         margin-right: auto;
         width: 80%;
     }
-
 }
 
 @media only screen and (min-width: 992px) {
@@ -777,35 +776,6 @@ button {
         font-size: 1.25rem;
     }
 
-    /*.menu .menu-logo {
-        height: 120px;
-        width: 120px;
-    }
-
-    .menu h1 {
-        display: block;
-    }
-
-    .menu nav.menu-navMain ul.navMain-items {
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .menu nav.menu-navMain ul.navMain-items li {
-        margin: .75rem 0;
-    }
-
-    .menu nav.menu-navSocial ul.navSocial-items {
-        bottom: 2rem;
-        left: 50%;
-        position: absolute;
-        transform: translateX(-50%);
-    }
-
-    .menu nav.menu-navSocial ul.navSocial-items .navSocial-icons {
-        font-size: 1.25rem;
-    }*/
-
     /*Intro Section*/
     .intro .intro-body {
         margin-left: var(--offset-1);
@@ -825,6 +795,7 @@ button {
         flex-basis: calc(50% - var(--bodySpacing) * 2);
         margin-bottom: calc(var(--bodySpacing) * 2);
         margin-right: calc(var(--bodySpacing) * 2);
+        position: relative;
     }
 
     .code-work .code-card:nth-child(2n) {
@@ -837,6 +808,23 @@ button {
 
     .code-work .code-card:last-child {
         margin-bottom: 0;
+    }
+
+    .code-work .code-card .card-textarea {
+        margin-bottom: calc(var(--bodySpacing) * 2);
+        /*overflow: hidden;*/
+    }
+
+    .code-work .code-card .card-textarea .card-alltags {
+        margin-bottom: 2rem;
+    }
+
+    .code-work .code-card button.card-btn {
+        bottom: var(--bodySpacing);
+        margin-bottom: 0;
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%);
     }
 
     /* About Section */
