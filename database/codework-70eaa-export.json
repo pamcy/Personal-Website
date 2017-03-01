@@ -1,0 +1,44 @@
+{
+  "urlData" : [ {
+    "desc" : "Instead of just using HTML5's built-in browser validation, I add additional custom rules to check the inputted value as well. It's a real-time validation using test() method to test for a match in RegExp, the feedback is displayed without submitting the form.",
+    "id" : 0,
+    "image" : "img/code-work/32-form-validation.gif",
+    "tags" : [ "css", "RegExp", "jQuery" ],
+    "title" : "HTML5 Form Validation with jQuery",
+    "url" : "https://chinyi3005.github.io/100websites/32-form-validation"
+  }, {
+    "desc" : "",
+    "id" : 1,
+    "image" : "http://placehold.it/350x100/aabbcc",
+    "tags" : [ "css", "javascript" ],
+    "title" : "02-simple-window",
+    "url" : "http://chinyi3005.github.io/100websites/02-simple-window/"
+  }, {
+    "desc" : "Use css property 'mix-blend-mode' for having a transparent text with its own background.",
+    "id" : 2,
+    "image" : "http://placehold.it/350x50/0066aa",
+    "tags" : [ "css" ],
+    "title" : "03-wanderlust-font",
+    "url" : "http://chinyi3005.github.io/100websites/03-wanderlust-font/"
+  }, {
+    "desc" : "I build a rough sample adventrue blog for practice with the latest HTML5 and CSS3 features.",
+    "id" : 3,
+    "image" : "http://placehold.it/350x50",
+    "tags" : [ "html", "css" ],
+    "title" : "04-html5blog",
+    "url" : "http://chinyi3005.github.io/100websites/04-html5blog/"
+  }, {
+    "desc" : "A CSS Only animation with a simple character sprite sheet and steps() to run the frame-by-frame effect.",
+    "id" : 4,
+    "image" : "http://placehold.it/350x50",
+    "tags" : [ "css" ],
+    "title" : "05 - A simple CSS Only Sprites Boy",
+    "url" : "http://chinyi3005.github.io/100websites/04-html5blog/"
+  } ],
+  "urlTags" : {
+    "all" : [ 0, 1, 2, 3, 4 ],
+    "css" : [ 0, 1, 2, 3, 4 ],
+    "javascript" : [ 0, 1 ],
+    "jQuery" : [ 0 ]
+  }
+}

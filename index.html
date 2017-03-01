@@ -10,9 +10,7 @@
         <!-- Place favicon.ico in the root directory -->
 
         <!-- Stylesheets -->
-        <!-- <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900" rel="stylesheet"> -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
-        <!-- <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet"> -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
@@ -74,146 +72,36 @@
                             <!-- Code Filter Area -->
                             <nav class="code-filter">
                                 <label class="filter-title">Show</label>
-                                <button class="filter-btn isActive" type="button" data-ref="filter" data-lauguage="all">All</button>
-                                <button class="filter-btn" type="button" data-ref="filter" data-lauguage="css">CSS</button>
-                                <button class="filter-btn" type="button" data-ref="filter" data-lauguage="javascript">Javascript</button>
-                                <button class="filter-btn" type="button" data-ref="filter" data-lauguage="jquery">jQuery</button>
-                                <button class="filter-btn" type="button" data-ref="filter" data-lauguage="ajax">AJAX</button>
-                                <button class="filter-btn" type="button" data-ref="filter" data-lauguage="bootstrap">Bootstrap</button>
-                                <button class="filter-btn" type="button" data-ref="filter" data-lauguage="responsive">Responsive</button>
+                                <button class="filter-btn isActive" type="button" value="all">All</button>
+                                <button class="filter-btn" type="button" value="css">CSS</button>
+                                <button class="filter-btn" type="button" value="javascript">Javascript</button>
+                                <button class="filter-btn" type="button" value="jquery">jQuery</button>
+                                <button class="filter-btn" type="button" value="ajax">AJAX</button>
+                                <button class="filter-btn" type="button" value="bootstrap">Bootstrap</button>
+                                <button class="filter-btn" type="button" value="responsive">Responsive</button>
                             </nav>
 
                             <!-- Code Cards Area -->
-                            <div class="code-work" data-ref="code-work">
-                                <div class="code-card" data-ref="card">
-                                    <a href=""><img class="card-img" src="https://unsplash.it/1290/960/?random" alt=""></a>
-                                    <div class="card-textarea">
-                                        <h3 class="card-title">HTML5 Form Validation with jQuery</h3>
-                                        <p>Instead of just using HTML5's built-in browser validation, I add additional custom rules to check the inputted value as well. It's a real-time validation using test() method to test for a match in RegExp, the feedback is displayed without submitting the form.</p>
-                                        <div class="card-alltags">
-                                            <i class="card-tagicon fa fa-tags"></i>
-                                            <ul class="card-tag">
-                                                <li>html5</li>
-                                                <li>css</li>
-                                                <li>regexp</li>
-                                                <li>jquery</li>
-                                            </ul>
-                                        </div>
+                            <div class="code-work" data-ref="code-work"></div> <!-- ^.code-work -->
+
+                            <!-- Code Cards Template -->
+                            <div class="mix code-card" id="code-card-template" style="display:none;">
+                                <a href="" class="card-url"><img class="card-img" src="https://unsplash.it/1290/960/?random" target="_blank"></a>
+                                <div class="card-textarea">
+                                    <h3 class="card-title">HTML5 Form Validation with jQuery</h3>
+                                    <p class="card-description">Instead of just using HTML5's built-in browser validation, I add additional custom rules to check the inputted value as well. It's a real-time validation using test() method to test for a match in RegExp, the feedback is displayed without submitting the form.</p>
+                                    <div class="card-alltags">
+                                        <i class="card-tagicon fa fa-tags"></i>
+                                        <ul class="card-tag">
+                                            <li>html5</li>
+                                            <li>css</li>
+                                            <li>regexp</li>
+                                            <li>jquery</li>
+                                        </ul>
                                     </div>
-                                    <a href=""><button class="card-btn">View Demo</button></a>
                                 </div>
-
-                                <div class="code-card" data-ref="card">
-                                    <a href=""><img class="card-img" src="https://unsplash.it/1290/960/?random" alt=""></a>
-                                    <div class="card-textarea">
-                                        <h3 class="card-title">HTML5 Form Validation with jQuery</h3>
-                                        <p>Instead of just using HTML5's built-in browser validation, I add additional custom rules to check the inputted value as well. It's a real-time validation using test() method to test for a match in RegExp, the feedback is displayed without submitting the form.</p>
-                                        <div class="card-alltags">
-                                            <i class="card-tagicon fa fa-tags"></i>
-                                            <ul class="card-tag">
-                                                <li>html5</li>
-                                                <li>css</li>
-                                                <li>regexp</li>
-                                                <li>jquery</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <a href=""><button class="card-btn">View Demo</button></a>
-                                </div>
-
-                                <div class="code-card" data-ref="card">
-                                    <a href=""><img class="card-img" src="https://unsplash.it/1290/960/?random" alt=""></a>
-                                    <div class="card-textarea">
-                                        <h3 class="card-title">HTML5 Form Validation with jQuery</h3>
-                                        <p>Instead of just using HTML5's built-in browser validation, I add additional custom rules to check the inputted value as well. It's a real-time validation using test() method to test for a match in RegExp, the feedback is displayed without submitting the form.</p>
-                                        <div class="card-alltags">
-                                            <i class="card-tagicon fa fa-tags"></i>
-                                            <ul class="card-tag">
-                                                <li>html5</li>
-                                                <li>css</li>
-                                                <li>regexp</li>
-                                                <li>jquery</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <a href=""><button class="card-btn">View Demo</button></a>
-                                </div>
-
-                                <div class="code-card" data-ref="card">
-                                    <a href=""><img class="card-img" src="https://unsplash.it/1290/960/?random" alt=""></a>
-                                    <div class="card-textarea">
-                                        <h3 class="card-title">HTML5 Form Validation with jQuery</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur dignissimos esse voluptatem facere ipsam obcaecati, laboriosam rerum, sint nostrum possimus itaque dolorum consequatur facilis quod quo rem! Officiis soluta, optio!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae itaque quasi ad soluta consequatur qui esse veritatis aspernatur, eius quod sapiente natus commodi voluptatum, accusamus, necessitatibus deleniti, laborum nostrum quo.Instead of just using HTML5's built-in browser validation, I add additional custom rules to check the inputted value as well. It's a real-time validation using test() method to test for a match in RegExp, the feedback is displayed without submitting the form.</p>
-                                        <div class="card-alltags">
-                                            <i class="card-tagicon fa fa-tags"></i>
-                                            <ul class="card-tag">
-                                                <li>html5</li>
-                                                <li>css</li>
-                                                <li>regexp</li>
-                                                <li>jquery</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <a href=""><button class="card-btn">View Demo</button></a>
-                                </div>
-
-                                <div class="code-card" data-ref="card">
-                                    <a href=""><img class="card-img" src="https://unsplash.it/1290/960/?random" alt=""></a>
-                                    <div class="card-textarea">
-                                        <h3 class="card-title">HTML5 Form Validation with jQuery</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos cumque fugiat nulla saepe molestiae officiis illum nobis neque ut quaerat placeat ratione illo, vitae molestias accusantium tenetur minima commodi! Suscipit.Instead of just using HTML5's built-in browser validation, I add additional custom rules to check the inputted value as well. It's a real-time validation using test() method to test for a match in RegExp, the feedback is displayed without submitting the form.</p>
-                                        <div class="card-alltags">
-                                            <i class="card-tagicon fa fa-tags"></i>
-                                            <ul class="card-tag">
-                                                <li>html5</li>
-                                                <li>css</li>
-                                                <li>regexp</li>
-                                                <li>jquery</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <a href=""><button class="card-btn">View Demo</button></a>
-                                </div>
-
-                                <div class="code-card" data-ref="card">
-                                    <a href=""><img class="card-img" src="https://unsplash.it/1290/960/?random" alt=""></a>
-                                    <div class="card-textarea">
-                                        <h3 class="card-title">HTML5 Form Validation with jQuery</h3>
-                                        <p>Instead of just using HTML5's built-in browser validation, I add additional custom rules to check the inputted value as well. It's a real-time validation using test() method to test for a match in RegExp, the feedback is displayed without submitting the form.</p>
-                                        <div class="card-alltags">
-                                            <i class="card-tagicon fa fa-tags"></i>
-                                            <ul class="card-tag">
-                                                <li>html5</li>
-                                                <li>css</li>
-                                                <li>regexp</li>
-                                                <li>jquery</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <a href=""><button class="card-btn">View Demo</button></a>
-                                </div>
-
-                                <div class="code-card" data-ref="card">
-                                    <a href=""><img class="card-img" src="https://unsplash.it/1290/960/?random" alt=""></a>
-                                    <div class="card-textarea">
-                                        <h3 class="card-title">HTML5 Form Validation with jQuery</h3>
-                                        <p>Instead of just using HTML5's built-in browser validation, I add additional custom rules to check the inputted value as well. It's a real-time validation using test() method to test for a match in RegExp, the feedback is displayed without submitting the form.</p>
-                                        <div class="card-alltags">
-                                            <i class="card-tagicon fa fa-tags"></i>
-                                            <ul class="card-tag">
-                                                <li>html5</li>
-                                                <li>css</li>
-                                                <li>regexp</li>
-                                                <li>jquery</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <a href=""><button class="card-btn">View Demo</button></a>
-                                </div>
-
-
-
-                            </div> <!-- ^.code-work -->
+                                <a href="" class="code-url"><button type="button" class="card-btn">View Demo</button></a>
+                            </div>
 
                             <!-- Code Load More Button -->
                             <button class="loadmore-btn" type="button">Show More Projects
@@ -344,10 +232,23 @@
 
 
 
-
+        <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyAG4ToEWYNenq6JrpbPqANJjxFBEE0y1As",
+                authDomain: "codework-70eaa.firebaseapp.com",
+                databaseURL: "https://codework-70eaa.firebaseio.com",
+                storageBucket: "codework-70eaa.appspot.com",
+                messagingSenderId: "889791071354"
+            };
+            firebase.initializeApp(config);
+            //^
+        </script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="js/mixitup.min.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/getfirebase.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

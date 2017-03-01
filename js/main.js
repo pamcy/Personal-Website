@@ -8,7 +8,6 @@ var TitleRotate = function(el, typing, period) {
     this.text = '';
     this.tick();
     this.isDeleting = false;
-    // console.log(this);
 }
 
 TitleRotate.prototype.tick = function() {
@@ -43,7 +42,7 @@ TitleRotate.prototype.tick = function() {
     }, delta);
 };
 
-window.onload = function() {
+var TitleRotateLaunch = function() {
     var elements = document.getElementsByClassName('intro-title'),
         css = document.createElement('style');
 
@@ -66,6 +65,8 @@ window.onload = function() {
 // Change The Form Subject //
 $(document).ready(function() {
 
+    TitleRotateLaunch();
+
     $('#form-subject').on('change', function() {
 
         var option = $('#form-subject option:selected').val(),
@@ -78,5 +79,4 @@ $(document).ready(function() {
             formBodyWork.css('display', 'block').siblings('.form-body').css('display', 'none');
         }
     });
-
 });
