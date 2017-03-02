@@ -152,6 +152,23 @@ button {
     padding: .3rem 1.25rem;
 }
 
+.menu-isFixed {
+    height: 70px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    -webkit-transition: -webkit-transform .6s;
+    transition: -webkit-transform .6s;
+    transition: transform .6s;
+    transition: transform .6s, -webkit-transform .6s;
+    width: 100%;
+    z-index: 2;
+}
+
+.menu-isHidden {
+    transform: translateY(-100%);
+}
+
 .menu .menu-body {
     align-items: center;
     display: flex;
@@ -173,7 +190,6 @@ button {
 
 .menu .menu-body nav.menu-navMain ul.navMain-items {
     display: flex;
-    /*justify-content: flex-end;*/
 }
 
 .menu .menu-body nav.menu-navMain ul.navMain-items li {
@@ -197,6 +213,7 @@ button {
     background-size: cover;
     display: flex;
     height: auto;
+    margin-top: 4rem;
     width: 100%;
 }
 
@@ -658,8 +675,6 @@ button {
 @media only screen and (min-width: 500px) {
     /* Header Nav Menu */
     .menu .menu-body {
-        align-items: center;
-        display: flex;
         justify-content: center;
     }
 
@@ -744,8 +759,14 @@ button {
         padding: 2rem;
     }
 
+    .menu-isFixed {
+        height: 100vh;
+        position: static;
+    }
+
     .menu .menu-body {
         flex-direction: column;
+        justify-content: flex-start;
     }
 
     .menu .menu-body .menu-logo a {
@@ -777,6 +798,10 @@ button {
     }
 
     /*Intro Section*/
+    .intro {
+        margin-top: 0;
+    }
+
     .intro .intro-body {
         margin-left: var(--offset-1);
         max-width: var(--gird-10);
