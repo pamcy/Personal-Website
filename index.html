@@ -12,11 +12,12 @@
         <!-- Stylesheets -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="assets/css/normalize.css">
+        <link rel="stylesheet" href="assets/css/main.css">
     </head>
     <body>
         <div class="wrapper">
+
             <!-- Header Nav Menu -->
             <header class="menu menu-isFixed">
                 <div class="menu-body">
@@ -26,9 +27,9 @@
                     <nav class="menu-navMain">
                         <h1><a href="">{ Pamcy.io }</a></h1>
                         <ul class="navMain-items">
-                            <li><a href="">Code</a></li>
-                            <li><a href="">About</a></li>
-                            <li><a href="">Contact</a></li>
+                            <li><a href="#code">Code</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#contact">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -45,7 +46,7 @@
             <!-- Main Content -->
             <main>
                 <!-- Intro Section -->
-                <section class="intro">
+                <section class="intro" id="top">
                     <div class="container container-wide">
                         <div class="intro-body">
                             <span class="intro-title" data-period="2000" data-text='[ "Hello!", "你好!", "Hallo!", "Salut!", "Hola!", "Ciao!" ]'>
@@ -62,7 +63,7 @@
                 </section>
 
                 <!-- Code Section -->
-                <section class="code">
+                <section class="code" id="code">
                     <div class="container container-wide">
                         <div class="code-body">
                             <!-- Code Summary -->
@@ -112,7 +113,7 @@
                 </section> <!-- ^.code -->
 
                 <!-- About Section -->
-                <section class="about">
+                <section class="about" id="about">
                     <div class="container container-wide">
                         <div class="about-body">
                             <h2># About</h2>
@@ -155,7 +156,7 @@
                     </div> <!-- ^.container .container-wide -->
                 </section>
 
-                <section class="contact">
+                <section class="contact" id="contact">
                     <div class="container container-wide">
                         <div class="contact-body">
                             <h2># Contact</h2>
@@ -246,9 +247,9 @@
             //^
         </script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="js/mixitup.min.js"></script>
-        <script src="js/main.js"></script>
-        <script src="js/getfirebase.js"></script>
+        <script src="assets/js/mixitup.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/getfirebase.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

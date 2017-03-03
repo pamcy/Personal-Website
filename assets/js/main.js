@@ -1,4 +1,6 @@
-//*** Auto-hiding sticky navbar ***//
+// --------------------------------------
+// Auto-hiding sticky navbar
+// --------------------------------------
 var navbar = $('.menu-isFixed'),
     currentTop = 0,
     lastTop = 0,
@@ -20,7 +22,26 @@ function autoHideNav () {
 $(window).on('scroll', autoHideNav);
 
 
-//*** Auto Typing Hello ***//
+// --------------------------------------
+// Smooth Scrolling
+// --------------------------------------
+function smoothScrolling(e) {
+    e.preventDefault();
+
+    var menuLink = $(this.hash),
+        scrollSpeed = 1000;
+
+    $('html, body').animate(
+        {'scrollTop': menuLink.offset().top}, scrollSpeed);
+
+    console.log(menuLink);
+    console.log(`Current Positon form top: ${menuLink.offset().top}`);
+}
+
+
+// --------------------------------------
+// Auto Typing Hello
+// --------------------------------------
 var TitleRotate = function(el, typing, period) {
     this.el = el;
     this.typing = typing;
@@ -83,7 +104,9 @@ var TitleRotateLaunch = function() {
 }
 
 
-//*** Change form subject ***//
+// --------------------------------------
+// Change form subject
+// --------------------------------------
 function changeSubject() {
     var option = $('#form-subject option:selected').val(),
         formBodyHi = $('.contact-form').find('.form-body-hi'),
@@ -99,7 +122,12 @@ function changeSubject() {
 
 $(document).ready(function() {
 
+    // Auto Typing Hello
     TitleRotateLaunch();
 
+    // Smooth Scrolling
+    $('a[href^="#"]').on('click', smoothScrolling);
+
+    // Change form subject
     $('#form-subject').on('change', changeSubject);
 });
