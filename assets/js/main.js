@@ -29,6 +29,7 @@ $(window).on('scroll', autoHideNav);
 function smoothScrolling(e) {
     e.preventDefault();
 
+    var rootContainer;
     // 依據不同的裝置，指定不同的容器準備進行捲動
     if (isMobile) {
         rootContainer = $('html, body');
