@@ -31,7 +31,7 @@ function smoothScrolling(e) {
     var menuLink = $(this.hash),
         scrollSpeed = 1000;
 
-    $('html, body').animate(
+    $('html, body, main').animate(
         {'scrollTop': menuLink.offset().top}, scrollSpeed);
 
     console.log(menuLink);
