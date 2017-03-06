@@ -24,35 +24,49 @@ $(window).on('scroll', autoHideNav);
 
 
 // --------------------------------------
+// Check if user on mobile device
+// --------------------------------------
+var menuPosition = $('.menu').css('position'),
+    isMobile = false;
+
+function isMobileDevice() {
+    isMobile = false;
+
+    if (menuPosition === 'fixed') {
+        isMobile = true;
+    }
+}
+
+
+// --------------------------------------
 // Smooth Scrolling
 // --------------------------------------
 function smoothScrolling(e) {
+
     e.preventDefault();
 
-    var rootContainer;
-    // 依據不同的裝置，指定不同的容器準備進行捲動
-    if (isMobile) {
-        rootContainer = $('html, body');
-    } else {
-        rootContainer = $('main');
-    }
+    // Choose the container for scrolling according to the device
+    var rootContainer,
+        containerMobile = $('html, body'),
+        containerDesk = $('main'),
 
-    var currentScrollTop = rootContainer.scrollTop(), // 取得目前容器的捲軸位置
-        menuLink = $(this.hash),
-        nextScrollTop = currentScrollTop + menuLink.offset().top, // 計算：欲移動距離
+    rootContainer = (isMobile) ? containerMobile : containerDesk;
+
+    var menuLink = $(this.hash),
+        currentScrollTop = rootContainer.scrollTop(),
+        nextScrollTop = currentScrollTop + menuLink.offset().top,
         scrollSpeed = 1000;
 
-    // 如果目標與現在位置誤差小於絕對值 1 ，就不移動
-    // Math.abs() 取絕對值, 正值表示畫面向下捲動，負值表示畫面向上捲動
     if (Math.abs(menuLink.offset().top) <= 1) {
         return false;
     }
 
-    // 加入 stop() 連續點擊的時候才不會壞掉
-    rootContainer.stop().animate(
-            {'scrollTop': nextScrollTop},
-            scrollSpeed
-        );
+    $(rootContainer).stop().animate(
+        {'scrollTop': nextScrollTop}, scrollSpeed);
+
+    console.log(rootContainer);
+    console.log(menuLink);
+    console.log(`Current Positon form top: ${menuLink.offset().top}`);
 }
 
 
@@ -147,6 +161,11 @@ function isMobileDevice() {
 
 
 $(document).ready(function() {
+    // Check if user on mobile device
+    isMobileDevice();
+
+    // Resize Window and mobile detect
+    $(window).on('resize', isMobileDevice);
 
     isMobileDevice(); // 網站 onReady 馬上檢查使用者是否為 mobile (第一次，僅執行一次)
 
