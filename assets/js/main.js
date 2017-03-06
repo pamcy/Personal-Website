@@ -5,7 +5,8 @@ var navbar = $('.menu-isFixed'),
     currentTop = 0,
     lastTop = 0,
     scrollDelta = 10,
-    scrollOffset = 150;
+    scrollOffset = 150,
+    isMobile = false;
 
 function autoHideNav () {
     currentTop = $(this).scrollTop();
@@ -149,6 +150,15 @@ function changeSubject() {
     }
 }
 
+// 判斷目前是否為 mobile
+function isMobileDevice() {
+    // 檢查 menu 的狀態判斷是否為 mobile 版
+    isMobile = false;
+    if ($('.menu').css('position') == 'fixed') {
+        isMobile = true;
+    }
+}
+
 
 $(document).ready(function() {
     // Check if user on mobile device
@@ -156,6 +166,13 @@ $(document).ready(function() {
 
     // Resize Window and mobile detect
     $(window).on('resize', isMobileDevice);
+
+    isMobileDevice(); // 網站 onReady 馬上檢查使用者是否為 mobile (第一次，僅執行一次)
+
+    // 每次當視窗大小變動，檢查使用者是否為 mobile
+    $(window).resize(function() {
+        isMobileDevice();
+    });
 
     // Auto Typing Hello
     TitleRotateLaunch();
