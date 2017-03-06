@@ -23,17 +23,47 @@ $(window).on('scroll', autoHideNav);
 
 
 // --------------------------------------
+// Check if user on mobile device
+// --------------------------------------
+var menuPosition = $('.menu').css('position'),
+    isMobile = false;
+
+function isMobileDevice() {
+    isMobile = false;
+
+    if (menuPosition === 'fixed') {
+        isMobile = true;
+    }
+}
+
+
+// --------------------------------------
 // Smooth Scrolling
 // --------------------------------------
 function smoothScrolling(e) {
+
     e.preventDefault();
 
+    // Choose the container for scrolling according to the device
+    var rootContainer,
+        containerMobile = $('html, body'),
+        containerDesk = $('main'),
+
+    rootContainer = (isMobile) ? containerMobile : containerDesk;
+
     var menuLink = $(this.hash),
+        currentScrollTop = rootContainer.scrollTop(),
+        nextScrollTop = currentScrollTop + menuLink.offset().top,
         scrollSpeed = 1000;
 
-    $('html, body, main').animate(
-        {'scrollTop': menuLink.offset().top}, scrollSpeed);
+    if (Math.abs(menuLink.offset().top) <= 1) {
+        return false;
+    }
 
+    $(rootContainer).stop().animate(
+        {'scrollTop': nextScrollTop}, scrollSpeed);
+
+    console.log(rootContainer);
     console.log(menuLink);
     console.log(`Current Positon form top: ${menuLink.offset().top}`);
 }
@@ -121,6 +151,11 @@ function changeSubject() {
 
 
 $(document).ready(function() {
+    // Check if user on mobile device
+    isMobileDevice();
+
+    // Resize Window and mobile detect
+    $(window).on('resize', isMobileDevice);
 
     // Auto Typing Hello
     TitleRotateLaunch();
