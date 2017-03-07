@@ -25,10 +25,10 @@ $(window).on('scroll', autoHideNav);
 // --------------------------------------
 // Check if user on mobile device
 // --------------------------------------
-var menuPosition = $('.menu').css('position'),
-    isMobile = false;
+var isMobile = false;
 
 function isMobileDevice() {
+    var menuPosition = $('.menu').css('position');
     isMobile = false;
 
     if (menuPosition === 'fixed') {
@@ -56,16 +56,30 @@ function smoothScrolling(e) {
         nextScrollTop = currentScrollTop + menuLink.offset().top,
         scrollSpeed = 1000;
 
+    $(rootContainer).stop().animate(
+        {'scrollTop': nextScrollTop}, scrollSpeed);
+
     if (Math.abs(menuLink.offset().top) <= 1) {
         return false;
     }
 
-    $(rootContainer).stop().animate(
-        {'scrollTop': nextScrollTop}, scrollSpeed);
+    // console.log(rootContainer);
+    // console.log(menuLink);
+    // console.log(`Current Positon form top: ${menuLink.offset().top}`);
+}
 
-    console.log(rootContainer);
-    console.log(menuLink);
-    console.log(`Current Positon form top: ${menuLink.offset().top}`);
+
+// --------------------------------------
+// Change menu's color
+// --------------------------------------
+var menuItem = $('a[href^="#"]');
+
+for (var i = 0; i < menuItem.length; i++) {
+    $(menuItem[i]).on('click', changeLinkColor);
+}
+
+function changeLinkColor() {
+    console.log($(this));
 }
 
 
@@ -162,6 +176,8 @@ $(document).ready(function() {
 
     // Smooth Scrolling
     $('a[href^="#"]').on('click', smoothScrolling);
+
+    // $('a[href^="#"]').on('click', changeLinkColor);
 
     // Change form subject
     $('#form-subject').on('change', changeSubject);
