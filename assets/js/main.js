@@ -1,32 +1,37 @@
+var navbar = $('.menu-isFixed'),
+    windowCurrentTop = 0,
+    windowLastTop = 0,
+    scrollDelta = 10,
+    scrollOffset = 150,
+    isMobile = false,
+    rootContainer,
+    containerMobile = $('html, body'),
+    containerDesk = $('main'),
+    menuItem = $('.navMain-items a'),
+    scrollSpeed = 1000;
+
+
 // --------------------------------------
 // Auto-hiding sticky navbar
 // --------------------------------------
-var navbar = $('.menu-isFixed'),
-    currentTop = 0,
-    lastTop = 0,
-    scrollDelta = 10,
-    scrollOffset = 150;
-
 function autoHideNav () {
-    currentTop = $(this).scrollTop();
+    windowCurrentTop = $(this).scrollTop();
 
-    if (lastTop - currentTop > scrollDelta) {
+    if (windowLastTop - windowCurrentTop > scrollDelta) {
         navbar.removeClass('menu-isHidden');
-    } else if (currentTop - lastTop > scrollDelta && currentTop > scrollOffset) {
+    } else if (windowCurrentTop - windowLastTop > scrollDelta && windowCurrentTop > scrollOffset) {
         navbar.addClass('menu-isHidden');
     }
 
-    lastTop = currentTop;
+    windowLastTop = windowCurrentTop;
 }
 
 $(window).on('scroll', autoHideNav);
 
 
 // --------------------------------------
-// Check if user on mobile device
+// Check Devices and choose its container
 // --------------------------------------
-var isMobile = false;
-
 function isMobileDevice() {
     var menuPosition = $('.menu').css('position');
     isMobile = false;
@@ -34,6 +39,9 @@ function isMobileDevice() {
     if (menuPosition === 'fixed') {
         isMobile = true;
     }
+
+    // Choose the container for scrolling according to the device
+    rootContainer = (isMobile) ? containerMobile : containerDesk;
 }
 
 
@@ -44,42 +52,59 @@ function smoothScrolling(e) {
 
     e.preventDefault();
 
-    // Choose the container for scrolling according to the device
-    var rootContainer,
-        containerMobile = $('html, body'),
-        containerDesk = $('main'),
-
-    rootContainer = (isMobile) ? containerMobile : containerDesk;
-
-    var menuLink = $(this.hash),
+    var menuSection = $(this.hash),
         currentScrollTop = rootContainer.scrollTop(),
-        nextScrollTop = currentScrollTop + menuLink.offset().top,
-        scrollSpeed = 1000;
+        nextScrollTop = currentScrollTop + menuSection.offset().top;
 
+    // Scroll smoothly
     $(rootContainer).stop().animate(
-        {'scrollTop': nextScrollTop}, scrollSpeed);
+        {'scrollTop': nextScrollTop}, scrollSpeed, function() {
+            $(rootContainer).on('scroll', menuScrolling);
+        });
 
-    if (Math.abs(menuLink.offset().top) <= 1) {
+    if (Math.abs(menuSection.offset().top) <= 1) {
         return false;
     }
 
-    // console.log(rootContainer);
-    // console.log(menuLink);
-    // console.log(`Current Positon form top: ${menuLink.offset().top}`);
+    // When menu is clicked change the color
+    menuItem.each(function() {
+        $(this).removeClass('navMain-items-isActive');
+    });
+    $(this).addClass('navMain-items-isActive');
+
+    console.log(rootContainer);
+    // console.log(menuSection);
+    // console.log(`Current Positon form top: ${menuSection.offset().top}`);
 }
 
 
 // --------------------------------------
-// Change menu's color
+// Change menu color while scrolling
 // --------------------------------------
-var menuItem = $('a[href^="#"]');
+function menuScrolling() {
 
-for (var i = 0; i < menuItem.length; i++) {
-    $(menuItem[i]).on('click', changeLinkColor);
-}
+    currentScrollTop = rootContainer.scrollTop();
 
-function changeLinkColor() {
-    console.log($(this));
+    $('.navMain-items a').each(function() {
+        var linkMenu = $(this),
+            linkSection = $(this.hash),
+            linkSectionTop = linkSection.position().top,
+            linkSectionHeight = linkSection.height();
+
+        if (linkSectionTop <= currentScrollTop &&
+            linkSectionTop + linkSectionHeight > currentScrollTop) {
+            $('.navMain-items a').removeClass('navMain-items-isActive');
+            linkMenu.addClass('navMain-items-isActive');
+        }
+        else {
+            linkMenu.removeClass('navMain-items-isActive');
+        }
+
+    console.log(linkSection);
+    console.log(`linkSectionTop: ${linkSectionTop}`);
+    console.log(`linkSectionHeight: ${linkSectionHeight}`);
+
+    });
 }
 
 
@@ -164,6 +189,9 @@ function changeSubject() {
 }
 
 
+// --------------------------------------
+// Document Ready
+// --------------------------------------
 $(document).ready(function() {
     // Check if user on mobile device
     isMobileDevice();
@@ -176,8 +204,6 @@ $(document).ready(function() {
 
     // Smooth Scrolling
     $('a[href^="#"]').on('click', smoothScrolling);
-
-    // $('a[href^="#"]').on('click', changeLinkColor);
 
     // Change form subject
     $('#form-subject').on('change', changeSubject);
