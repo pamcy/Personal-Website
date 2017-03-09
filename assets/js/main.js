@@ -57,24 +57,20 @@ function smoothScrolling(e) {
         nextScrollTop = currentScrollTop + menuSection.offset().top;
 
     // Scroll smoothly
-    $(rootContainer).stop().animate(
-        {'scrollTop': nextScrollTop}, scrollSpeed, function() {
-            $(rootContainer).on('scroll', menuScrolling);
-        });
+    rootContainer.stop().animate(
+            {'scrollTop': nextScrollTop},
+            scrollSpeed
+        );
 
     if (Math.abs(menuSection.offset().top) <= 1) {
         return false;
     }
 
-    // When menu is clicked change the color
-    menuItem.each(function() {
-        $(this).removeClass('navMain-items-isActive');
-    });
-    $(this).addClass('navMain-items-isActive');
+    menuItem.removeClass('navMain-items-isActive'); // 先把所有 active 移掉
 
-    console.log(rootContainer);
-    // console.log(menuSection);
-    // console.log(`Current Positon form top: ${menuSection.offset().top}`);
+    // 目前點擊的對象，加上 active ，
+    // 但是意義不大，因為只要 scroll 就會執行 menuScrolling()
+    $(this).addClass('navMain-items-isActive');
 }
 
 
@@ -83,27 +79,30 @@ function smoothScrolling(e) {
 // --------------------------------------
 function menuScrolling() {
 
-    currentScrollTop = rootContainer.scrollTop();
+    currentScrollTop = rootContainer.scrollTop(); // 取得目前捲動位置
 
+    // each，檢查每個 menu 連結的位置
     $('.navMain-items a').each(function() {
         var linkMenu = $(this),
             linkSection = $(this.hash),
-            linkSectionTop = linkSection.position().top,
-            linkSectionHeight = linkSection.height();
 
-        if (linkSectionTop <= currentScrollTop &&
-            linkSectionTop + linkSectionHeight > currentScrollTop) {
-            $('.navMain-items a').removeClass('navMain-items-isActive');
+            // 取得這個 section 與可視畫面頂端的距離
+            // 負數 : 表示在可視畫面上方
+            // 正數 : 表示在可視畫下方或可視畫面內
+            linkSectionTop = linkSection.offset().top,
+
+            // 因為有 border 和 margin 寬度，所以使用 outerHeight()，才能拿到這個 section 真正佔用的畫面高度
+            linkSectionHeight = linkSection.outerHeight();
+
+
+        if (
+               (linkSectionTop <= 1) // 目前 section 位置必須在可視畫面上方
+            && (linkSectionHeight - Math.abs(linkSectionTop)) > 0 // section 高度減去 section 頂端位置大於 0 表示可視畫面在該 section 內
+           ) {
             linkMenu.addClass('navMain-items-isActive');
-        }
-        else {
+        } else {
             linkMenu.removeClass('navMain-items-isActive');
         }
-
-    console.log(linkSection);
-    console.log(`linkSectionTop: ${linkSectionTop}`);
-    console.log(`linkSectionHeight: ${linkSectionHeight}`);
-
     });
 }
 
@@ -195,6 +194,11 @@ function changeSubject() {
 $(document).ready(function() {
     // Check if user on mobile device
     isMobileDevice();
+
+    // 下面這行一定要在 isMobileDevice() 之後.
+    // 在 $(document).ready() 裡就綁定/註冊下面的動作.
+    // rootContainer 在 捲動時，就執行 menuScrolling().
+    rootContainer.on('scroll', menuScrolling);
 
     // Resize Window and mobile detect
     $(window).on('resize', isMobileDevice);
