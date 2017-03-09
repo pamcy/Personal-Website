@@ -260,12 +260,13 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    margin: 2.5rem 0 1.5rem;
+    margin: 2.5rem 0 1.5rem 1.5rem;
 }
 
 .code-filter label.filter-title {
     margin-right: .3rem;
     position: relative;
+    text-transform: uppercase;
 }
 
 .code-filter label.filter-title:after {
@@ -275,7 +276,7 @@ button {
     left: 0;
     position: absolute;
     top: 1.25rem;
-    width: 2.5rem;
+    width: 3.2rem;
 }
 
 .code-filter .filter-btn {
@@ -292,13 +293,10 @@ button {
     background: rgba(54, 54, 54, 0.2);
 }
 
-.code-filter .filter-btn.isActive {
+.code-filter .filter-btn.filter-btn-isActive {
     background: var(--highlight-default);
     color: #fff;
-}
-
-.code-filter .filter-btn.isActive:hover {
-    /*background:*/
+    cursor: default;
 }
 
 /* Item cards */
@@ -323,6 +321,14 @@ button {
 
 .code-work .code-card .card-textarea h3.card-title {
     margin-top: 0;
+}
+
+.code-work .code-card .card-textarea h3.card-title a.card-title-url {
+    color: var(--primaryColor);
+}
+
+.code-work .code-card .card-textarea h3.card-title a.card-title-url:hover {
+    color: rgba(54, 54, 54, .8);
 }
 
 .code-work .code-card .card-textarea .card-alltags {

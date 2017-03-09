@@ -72,8 +72,8 @@
 
                             <!-- Code Filter Area -->
                             <nav class="code-filter">
-                                <label class="filter-title">Show</label>
-                                <button class="filter-btn isActive" type="button" value="all">All</button>
+                                <label class="filter-title">Filter</label>
+                                <button class="filter-btn" type="button" value="all">All</button>
                                 <button class="filter-btn" type="button" value="css">CSS</button>
                                 <button class="filter-btn" type="button" value="javascript">Javascript</button>
                                 <button class="filter-btn" type="button" value="jquery">jQuery</button>
@@ -83,13 +83,19 @@
                             </nav>
 
                             <!-- Code Cards Area -->
-                            <div class="code-work" data-ref="code-work"></div> <!-- ^.code-work -->
+                            <div class="code-work"></div>
 
                             <!-- Code Cards Template -->
                             <div class="mix code-card" id="code-card-template" style="display:none;">
-                                <a href="" class="card-url"><img class="card-img" src="https://unsplash.it/1290/960/?random" target="_blank"></a>
+                                <a class="card-url" href="" target="_blank">
+                                    <img class="card-img" src="https://unsplash.it/1290/960/?random">
+                                </a>
                                 <div class="card-textarea">
-                                    <h3 class="card-title">HTML5 Form Validation with jQuery</h3>
+                                    <h3 class="card-title">
+                                        <a class="card-title-url" href="" target="_blank">
+                                            HTML5 Form Validation with jQuery
+                                        </a>
+                                    </h3>
                                     <p class="card-description">Instead of just using HTML5's built-in browser validation, I add additional custom rules to check the inputted value as well. It's a real-time validation using test() method to test for a match in RegExp, the feedback is displayed without submitting the form.</p>
                                     <div class="card-alltags">
                                         <i class="card-tagicon fa fa-tags"></i>
@@ -101,7 +107,9 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <a href="" class="code-url"><button type="button" class="card-btn">View Demo</button></a>
+                                <a class="card-btn-url" href="" target="_blank">
+                                    <button type="button" class="card-btn">View Demo</button>
+                                </a>
                             </div>
 
                             <!-- Code Load More Button -->

@@ -59,11 +59,12 @@ let fillDOM = function(dataKey, dataObj) {
         .attr('id', `data-${dataKey}`)
         .attr('data-order', (parseInt(dataKey) + 1) )
         .addClass(dataObj.tags.join(' ')) // e.g. html css
-        .find('.card-title').text(dataObj.title).end()
+        .find('.card-title-url').text(dataObj.title).attr('href', dataObj.url).end()
         .find('.card-description').text(dataObj.desc).end()
         .find('.card-img').attr('src', dataObj.image).end()
         .find('.card-url').attr('href', dataObj.url).end()
-        .find('.card-tag').html(tagLiHtml).end();
+        .find('.card-tag').html(tagLiHtml).end()
+        .find('.card-btn-url').attr('href', dataObj.url).end();
 
     $('.code-work').append($mixTemplate);
 
@@ -95,9 +96,12 @@ let executeMixerFilter = function() {
 
 $(function(){
     getTagList('all');
+    $('button[value="all"]').addClass('filter-btn-isActive');
 
-    $('.filter-btn').click(function(){
+    $('.filter-btn').click(function() {
         currentFilterValue = this.value;
         getTagList(currentFilterValue);
+        $('.filter-btn').removeClass('filter-btn-isActive');
+        $(this).addClass('filter-btn-isActive');
     });
 });
