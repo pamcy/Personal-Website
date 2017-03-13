@@ -264,19 +264,48 @@ button {
 }
 
 .code-filter label.filter-title {
+    border-bottom: 1px dashed var(--primaryColor);
+    cursor: help;
+    font-size: .9rem;
+    font-weight: 500;
     margin-right: .3rem;
     position: relative;
     text-transform: uppercase;
 }
 
-.code-filter label.filter-title:after {
-    background: #F5F5F5;
-    border: 1px dashed var(--primaryColor);
-    content: '';
-    left: 0;
+.code-filter label.filter-title::before,
+.code-filter label.filter-title::after {
+    left: 50%;
     position: absolute;
-    top: 1.25rem;
-    width: 3.2rem;
+    transition: all .3s ease;
+    visibility: hidden;
+}
+
+.code-filter label.filter-title::before {
+    border-color: transparent;
+    border-style: solid;
+    border-top-color: rgba(0, 0, 0, 0.7);
+    border-width: 10px 8px 0 8px;
+    content: '';
+    top: -20px;
+    transform: translate(-50%);
+}
+
+.code-filter label.filter-title::after {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 3px;
+    color: #eee;
+    content: attr(data-tooltip);
+    font-size: .8rem;
+    padding: .625rem;
+    text-transform: none;
+    transform: translate(-10%, -134.5%);
+    width: 200px;
+}
+
+.code-filter label.filter-title:hover::before,
+.code-filter label.filter-title:hover::after {
+    visibility: visible;
 }
 
 .code-filter .filter-btn {

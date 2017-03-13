@@ -54,25 +54,21 @@ function smoothScrolling(e) {
 
     var menuSection = $(this.hash),
         currentScrollTop = rootContainer.scrollTop(),
-        nextScrollTop = currentScrollTop + menuSection.offset().top;
+        nextScrollTop = menuSection.offset().top;
 
     // Scroll smoothly
     $(rootContainer).stop().animate(
-        {'scrollTop': nextScrollTop}, scrollSpeed, function() {
-            $(rootContainer).on('scroll', menuScrolling);
-        });
+        {'scrollTop': currentScrollTop + nextScrollTop}, scrollSpeed);
 
     if (Math.abs(menuSection.offset().top) <= 1) {
         return false;
     }
 
     // When menu is clicked change the color
-    menuItem.each(function() {
-        $(this).removeClass('navMain-items-isActive');
-    });
+    menuItem.removeClass('navMain-items-isActive');
     $(this).addClass('navMain-items-isActive');
 
-    console.log(rootContainer);
+    // console.log(rootContainer);
     // console.log(menuSection);
     // console.log(`Current Positon form top: ${menuSection.offset().top}`);
 }
@@ -81,31 +77,21 @@ function smoothScrolling(e) {
 // --------------------------------------
 // Change menu color while scrolling
 // --------------------------------------
-function menuScrolling() {
-
-    currentScrollTop = rootContainer.scrollTop();
-
-    $('.navMain-items a').each(function() {
-        var linkMenu = $(this),
-            linkSection = $(this.hash),
-            linkSectionTop = linkSection.position().top,
-            linkSectionHeight = linkSection.height();
-
-        if (linkSectionTop <= currentScrollTop &&
-            linkSectionTop + linkSectionHeight > currentScrollTop) {
-            $('.navMain-items a').removeClass('navMain-items-isActive');
-            linkMenu.addClass('navMain-items-isActive');
-        }
-        else {
-            linkMenu.removeClass('navMain-items-isActive');
-        }
-
-    console.log(linkSection);
-    console.log(`linkSectionTop: ${linkSectionTop}`);
-    console.log(`linkSectionHeight: ${linkSectionHeight}`);
-
-    });
-}
+// function menuScrolling() {
+//     currentScrollTop = rootContainer.scrollTop();
+//
+//     menuItem.each(function() {
+//         var linkMenu = $(this),
+//             linkSection = $(this.hash),
+//             linkSectionTop = linkSection.offset().top,
+//             linkSectionHeight = linkSection.outerHeight();
+//
+//         if (linkSectionTop <= 1 && ) {
+//
+//         }
+//     });
+//
+// }
 
 
 // --------------------------------------
@@ -195,6 +181,8 @@ function changeSubject() {
 $(document).ready(function() {
     // Check if user on mobile device
     isMobileDevice();
+
+    // rootContainer.on('scroll', menuScrolling);
 
     // Resize Window and mobile detect
     $(window).on('resize', isMobileDevice);
