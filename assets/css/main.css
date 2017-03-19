@@ -50,6 +50,13 @@ h2 {
 h3 {
     font-size: 1.5rem;
     font-weight: 300;
+    display:  inherit
+}
+
+
+h2 {
+    display: flex;
+    font-weight: 400;
 }
 
 p {
@@ -835,7 +842,7 @@ footer.footer-copyright {
     }
 
     .code-work .code-card:nth-child(2n) {
-        margin-right: 0;
+        /*margin-right: 0;*/
     }
 
     .code-work .code-card:not(:first-child) {
