@@ -469,6 +469,10 @@ button {
     line-height: 2.5;
 }
 
+.about-mainContent p.about-description a {
+    color: var(--about-linkColor);
+}
+
 .about-mainContent p.about-description span.about-underline {
     border-bottom: 2px solid var(--highlight-default);
     min-width: 75%;
@@ -481,6 +485,7 @@ button {
     left: 0;
     position: absolute;
     top: .95rem;
+    white-space: nowrap;
 }
 
 /* About Right Links Section */
@@ -502,7 +507,7 @@ button {
     padding-right: .3rem;
 }
 
-.about-links ul li a::after {
+/*.about-links ul li a::after {
     color: var(--about-linkColor);
     content: "\f08e";
     font-family: FontAwesome;
@@ -510,10 +515,10 @@ button {
     padding-left: .3rem;
     position: relative;
     top: -3px;
-}
+}*/
 
 .about-links ul li a:hover {
-    border-bottom: 1px solid var(--about-linkColor);
+    color: rgba(36, 94, 90, 0.8);
 }
 
 .about-links ul li a.heart-icon::before {
@@ -532,6 +537,10 @@ button {
 .contact .contact-body p.contact-summary {
     font-size: var(--subtitleSize);
     font-weight: 300;
+}
+
+.contact .contact-body p.contact-summary a {
+    color: var(--highlight-default);
 }
 
 /* Form Base Styles */
@@ -683,6 +692,10 @@ footer.footer-copyright {
     font-size: .8rem;
     padding: 2rem;
     text-align: center;
+}
+
+footer.footer-copyright .footer-heartIcon {
+    color: #FF6B6B;
 }
 
 
