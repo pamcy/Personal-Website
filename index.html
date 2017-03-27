@@ -93,7 +93,7 @@
                             <!-- Code Cards Area -->
                             <div class="code-work"></div>
 
-                            <!-- Code Cards Template -->
+                            <!-- Code Cards Template, 目前沒有直接被使用 -->
                             <div class="mix code-card" id="code-card-template" style="display:none;">
                                 <a class="card-url" href="" target="_blank">
                                     <img class="card-img" src="https://unsplash.it/1290/960/?random">
@@ -121,8 +121,15 @@
                             </div>
 
                             <!-- Code Load More Button -->
-                            <button class="loadmore-btn" type="button">Show More Projects
-                                <i class="loadmore-icon fa fa-chevron-down"></i>
+                            <button class="loadmore-btn" id="loadmore-btn" type="button">
+                                <div id="loadmore-btn--normal">
+                                    Show More Projects
+                                    <i class="loadmore-icon fa fa-chevron-down"></i>
+                                </div>
+                                <div id="loadmore-btn--loading" style="display: none;">
+                                    Loding...
+                                    <i class="fa fa-spinner fa-pulse fa-lg fa-fw"></i>
+                                </div>
                             </button>
                         </div> <!-- ^.code-body -->
                     </div> <!-- ^.container -->
