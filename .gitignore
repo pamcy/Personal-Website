@@ -1,3 +1,4 @@
 /others/*
 .DS_Store
-.tern-project
+jsconfig.json
+stylelint.config.js
