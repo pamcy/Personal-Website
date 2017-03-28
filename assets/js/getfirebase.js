@@ -1,7 +1,7 @@
 let filterWaitTime = 300; // mixitup 觸發時間; 0.3s
 let mixer;
 let mixerDatasets = []; // firebase api 資料暫存包
-let database = firebase.database(); // firebase 資料庫 介面
+let database = firebase.database(); // firebase 資料庫介面
 let timer = null;
 let currentFilterValue = 'all'; // 目前 filter tag, 預設為 all
 let numberOfPagesPerPage = 10; // 每頁筆數
@@ -39,8 +39,6 @@ let loadMoreBtnObj = {
         this.jQDom.hide();
     }
 };
-
-
 
 // API -> Firebase: Get data rows ID of urlTags
 let getTagList = function(tag, endAt) {
