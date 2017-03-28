@@ -861,9 +861,9 @@ footer.footer-copyright .footer-heartIcon {
         margin-top: 0;
     }
 
-    .code-work .code-card:last-child {
+    /*.code-work .code-card:last-child {
         margin-bottom: 0;
-    }
+    }*/
 
     .code-work .code-card .card-textarea {
         margin-bottom: calc(var(--bodySpacing) * 2);
