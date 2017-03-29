@@ -112,7 +112,7 @@ let fillDOM = function(dataObj) {
                 </a>
                 <div class="card-textarea">
                     <h3 class="card-title">
-                        <a class="card-title-url" href="${dataObj.url}" target="_blank">${dataObj.id} ${dataObj.title}</a>
+                        <a class="card-title-url" href="${dataObj.url}" target="_blank">${dataObj.title}</a>
                     </h3>
                     <p class="card-description">${dataObj.desc}</p>
                     <div class="card-alltags">
