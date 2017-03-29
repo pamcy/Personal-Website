@@ -627,11 +627,6 @@ button {
     font-size: .8rem;
 }
 
-.contact-form .form-body-hi,
-.contact-form .form-body-work {
-    display: none;
-}
-
 /* Form Footer */
 .contact-form .form-footer input {
     padding: 2px 0 2px;
