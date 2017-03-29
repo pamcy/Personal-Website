@@ -259,7 +259,7 @@
                                     <div class="form-row">
                                         <label for="subject">Subject: </label>
                                         <select class="form-inputValue" id="form-subject" name="subject" required>
-                                            <option value="Pick a subject" selected disabled>Choose a subject</option>
+                                            <option value="" selected disabled>Choose a subject</option>
                                             <option value="1">Hello!</option>
                                             <option value="2">Let's work together!</option>
                                         </select>
@@ -267,26 +267,14 @@
                                 </div>
 
                                 <!-- Form Body default -->
-                                <div class="form-body form-body-default">
+                                <div class="form-body" id="form-body-default">
                                     Hi, Pamcy
                                     <br>
                                     <p class="form-body-description">* Choose a subject above to start writing!</p>
                                 </div>
 
-                                <!-- Form Body Subject 1: Hi -->
-                                <div class="form-body form-body-hi">
-                                    Hi Pamcy,
-                                    <br>
-                                    <textarea name="form-body-message" rows="5" placeholder="Your message here" required></textarea>
-                                </div>
-
-                                <!-- Form Body Subject 2: Work -->
-                                <div class="form-body form-body-work">
-                                    Hi Pamcy,
-                                    <br>
-                                    I'm from <input type="text" name="company" placeholder="Your Company Name" required>, we are looking for Front-End Developer just like you. Here are some details of this job.
-                                    <textarea name="form-body-message" rows="5" placeholder="You are responsible for..." required></textarea>
-                                </div>
+                                <!-- Form Body Textarea -->
+                                <div class="form-body" id="form-body-new"></div>
 
                                 <!-- Form Footer -->
                                 <div class="form-footer">
