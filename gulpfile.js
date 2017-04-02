@@ -11,7 +11,7 @@ gulp.task('minify-js', function() {
             presets: ['es2015']
         }))
         .pipe(concat('main.min.js'))
-        // .pipe(uglify())
+        .pipe(uglify())
         .pipe(gulp.dest('assets/js'));
 })
 
@@ -26,4 +26,4 @@ gulp.task('minify-css', function() {
         .pipe(gulp.dest('assets/css'));
 })
 
-gulp.task('minify', ['minify-js', 'minify-css']);
+gulp.task('default', ['minify-js', 'minify-css']);

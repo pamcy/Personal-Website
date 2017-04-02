@@ -1,4 +1,5 @@
 var dataUrls = 'assets/data/codework-70eaa-export.json',
+    dataCollections,
     currentDisplayCollections = [], // Store all projects on the current screen
     mixer,
     currentFilterValue = 'all', // Current filter tag value, set 'all' as default
