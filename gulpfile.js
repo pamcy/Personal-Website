@@ -1,5 +1,4 @@
 var gulp = require('gulp'),
-    bs = require('browser-sync').create(),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     babel = require('gulp-babel'),
@@ -7,27 +6,24 @@ var gulp = require('gulp'),
     cleancss = require('gulp-clean-css');
 
 gulp.task('minify-js', function() {
-    return gulp.src('src/js/*.js')
+    return gulp.src('assets/js/*.js')
         .pipe(babel({
-            presets: ["es2015"]
+            presets: ['es2015']
         }))
         .pipe(concat('main.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('dist/js'));
+        // .pipe(uglify())
+        .pipe(gulp.dest('assets/js'));
 })
 
 gulp.task('minify-css', function() {
-    return gulp.src('src/css/*.css')
+    return gulp.src('assets/css/*.css')
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
         }))
         .pipe(concat('main.min.css'))
         .pipe(cleancss())
-        .pipe(gulp.dest('dist/css'))
+        .pipe(gulp.dest('assets/css'));
 })
 
-gulp.task('minify', ['minify-js', 'minify-css'], function() {
-    return gulp.src('src/index.html')
-      .pipe(gulp.dest('dist'))
-})
+gulp.task('minify', ['minify-js', 'minify-css']);
