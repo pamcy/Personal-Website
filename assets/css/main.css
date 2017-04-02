@@ -128,7 +128,7 @@ button {
    -------------------------------------------------------------------------- */
 .menu {
     align-items: center;
-    background: #FFF url(/src/img/bg_pattern_slash.png);
+    background: #FFF url(/assets/img/bg_pattern_slash.png);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -157,7 +157,7 @@ button {
 }
 
 .menu .menu-body .menu-logo a {
-    background: url(/src/img/logo-pamcy.svg) no-repeat center;
+    background: url(/assets/img/logo-pamcy.svg) no-repeat center;
     display: block;
     height: 60px;
     text-indent: -9999px;
@@ -195,7 +195,7 @@ button {
    Intro Section
    -------------------------------------------------------------------------- */
 .intro {
-    background: url(/src/img/bg-intro.jpg) no-repeat right center;
+    background: url(/assets/img/bg-intro.jpg) no-repeat right center;
     background-size: cover;
     display: flex;
     height: auto;
@@ -522,7 +522,7 @@ button {
 
 /* Form Headr Icon */
 .contact-form .form-header-icon {
-    background: url(/src/img/email.svg) no-repeat left center;
+    background: url(/assets/img/email.svg) no-repeat left center;
     background-size: 48px 48px;
     border-bottom: 1px solid #E6E6E6;
     min-height: 3.25rem;
