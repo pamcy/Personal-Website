@@ -163,7 +163,7 @@
 
                                 <h3 class="about-subtitle">How was this site built</h3>
                                     <p class="about-description">
-                                        This is a One-Page Mobile First website I built hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>, everything here are <span class="about-underline">HTML, CSS and JS<span class="underline-title">Skill 1</span></span>. Without the aid of framework, it’s 100% <span class="about-underline">responsive<span class="underline-title">Skill 2</span></span> based on <span class="about-underline">Flexbox<span class="underline-title">Skill 3</span></span>. I Stored all my coding challenges as JSON in <a href="https://firebase.google.com/" target="_blank">Firebase</a> and <span class="about-underline">retrieve data<span class="underline-title">Skill 4</span></span> from it, then with <a href="https://www.kunkalabs.com/mixitup/" target="_blank">MixItUp</a> library for animated filtering of search results. <a href="https://formspree.io/" target="_blank">Formspree</a> is a great option to integrate contact form into my website, it acts as ‘action’ attribute and forward the form data to my email.
+                                        This is a One-Page Mobile First website I built hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>, everything here are <span class="about-underline">HTML, CSS and JS<span class="underline-title">Skill 1</span></span>. Without the aid of framework, it’s 100% <span class="about-underline">responsive<span class="underline-title">Skill 2</span></span> based on <span class="about-underline">Flexbox<span class="underline-title">Skill 3</span></span>. I Stored all my coding challenges as JSON, <span class="about-underline">retrieve data and display it on the page<span class="underline-title">Skill 4</span></span>, then with <a href="https://www.kunkalabs.com/mixitup/" target="_blank">MixItUp</a> library for animated filtering of search results. <a href="https://formspree.io/" target="_blank">Formspree</a> is a great option to integrate contact form into my website, it acts as ‘action’ attribute and forward the form data to my email.
                                     </p>
 
                                 <h3 class="about-subtitle">Anything not related to the work</h3>
@@ -296,28 +296,17 @@
                 <!-- Footer Section -->
                 <footer class="footer-copyright">
                     <div class="container">
-                        Copyright &copy; 2017 Pamcy.io. Hand-crafted with <i class="footer-heartIcon fa fa-heart"></i> by Pamcy
+                        Copyright &copy; 2017 Pamcy.net. Hand-crafted with <i class="footer-heartIcon fa fa-heart"></i> by Pamcy
                     </div>
                 </footer>
 
             </main>
         </div> <!-- ^.wrapper -->
 
-        <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
-        <script>
-            // Initialize Firebase
-            var config = {
-                apiKey: "AIzaSyAG4ToEWYNenq6JrpbPqANJjxFBEE0y1As",
-                authDomain: "codework-70eaa.firebaseapp.com",
-                databaseURL: "https://codework-70eaa.firebaseio.com",
-                storageBucket: "codework-70eaa.appspot.com",
-                messagingSenderId: "889791071354"
-            };
-            firebase.initializeApp(config);
-        </script>
+        <!-- Scripts -->
         <script src="assets/vendors/jquery/jquery.min.js"></script>
         <script src="assets/vendors/mixitup/mixitup.min.js"></script>
         <script src="assets/js/main.js"></script>
-        <script src="assets/js/getfirebase.js"></script>
+        <script src="assets/js/filterCollection.js"></script>
     </body>
 </html>
