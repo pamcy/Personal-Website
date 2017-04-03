@@ -6,7 +6,7 @@ var gulp = require('gulp'),
     cleancss = require('gulp-clean-css');
 
 gulp.task('minify-js', function() {
-    return gulp.src('assets/js/*.js')
+    return gulp.src(['assets/js/*.js', '!assets/js/*.min.js'])
         .pipe(babel({
             presets: ['es2015']
         }))
@@ -16,7 +16,7 @@ gulp.task('minify-js', function() {
 })
 
 gulp.task('minify-css', function() {
-    return gulp.src('assets/css/*.css')
+    return gulp.src(['assets/css/*.css', '!assets/css/*.min.css'])
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
