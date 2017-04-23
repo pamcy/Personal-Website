@@ -216,11 +216,18 @@
     "tags" : [ "html5", "css", "jQuery", "RegExp" ],
     "title" : "HTML5 Form Validation with jQuery",
     "url" : "https://pamcy.github.io/50Websites/31-form-validation"
-  } ],
+  }, {
+    "desc" : "Pig is a basic dice game completed in pure JS, the first player to score 100 wins the game. I learn how the dice value changes to a new random number each time, with conditional statements to check if all of rules apply.",
+    "id" : 31,
+    "image" : "/assets/img/code-work/32-pig-dice-game.gif",
+    "tags" : [ "css", "javascript" ],
+    "title" : "Pig Dice Game",
+    "url" : "https://pamcy.github.io/50Websites/32-pig-dice-game/"
+  }],
   "urlTags" : {
-    "all" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30 ],
-    "css" : [ 0, 1, 2, 3, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20, 22, 24, 25, 26, 27, 28, 30 ],
-    "javascript" : [ 1, 15, 17, 18, 22, 23, 25, 26, 28 ],
+    "all" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 ],
+    "css" : [ 0, 1, 2, 3, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20, 22, 24, 25, 26, 27, 28, 30, 31 ],
+    "javascript" : [ 1, 15, 17, 18, 22, 23, 25, 26, 28, 31 ],
     "jQuery" : [ 1, 4, 5, 6, 8, 9, 10, 13, 14, 15, 18, 19, 20, 21, 24, 27, 29, 30 ],
     "bootstrap": [ 6, 8, 10, 14, 16, 20, 29 ],
     "ajax": [ 10, 29 ],
