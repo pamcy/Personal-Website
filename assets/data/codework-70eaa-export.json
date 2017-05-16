@@ -223,11 +223,18 @@
     "tags" : [ "css", "javascript" ],
     "title" : "Pig Dice Game",
     "url" : "https://pamcy.github.io/50Websites/32-pig-dice-game/"
+  }, {
+    "desc" : "It's a budgeting app that calculates a basic budget based on a list of income and expenses, the most important part I built in the app was the Module Pattern, with IIFE, closures and scope concepts to write a well-structure code.",
+    "id" : 32,
+    "image" : "/assets/img/code-work/33-budgeting-app.png",
+    "tags" : [ "javascript", "es6", "object-oriented" ],
+    "title" : "The Budget App",
+    "url" : "https://pamcy.github.io/50Websites/33-budgeting-app/"
   }],
   "urlTags" : {
-    "all" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 ],
+    "all" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32 ],
     "css" : [ 0, 1, 2, 3, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20, 22, 24, 25, 26, 27, 28, 30, 31 ],
-    "javascript" : [ 1, 15, 17, 18, 22, 23, 25, 26, 28, 31 ],
+    "javascript" : [ 1, 15, 17, 18, 22, 23, 25, 26, 28, 31, 32 ],
     "jQuery" : [ 1, 4, 5, 6, 8, 9, 10, 13, 14, 15, 18, 19, 20, 21, 24, 27, 29, 30 ],
     "bootstrap": [ 6, 8, 10, 14, 16, 20, 29 ],
     "ajax": [ 10, 29 ],
