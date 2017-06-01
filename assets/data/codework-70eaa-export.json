@@ -230,12 +230,19 @@
     "tags" : [ "javascript", "es6", "object-oriented" ],
     "title" : "The Budget App",
     "url" : "https://pamcy.github.io/50Websites/33-budgeting-app/"
+  }, {
+    "desc" : "This is a mostly CSS driven challenges with a little bit of JS for toggling class. I love work flex and transition together to increase the image size on mouseover, simple but powerful!",
+    "id" : 33,
+    "image" : "/assets/img/code-work/34-expanding-gallery.png",
+    "tags" : [ "css", "flexbox", "jQuery" ],
+    "title" : "Expanding image gallery with Flexbox",
+    "url" : "https://pamcy.github.io/50Websites/34-expanding-gallery"
   }],
   "urlTags" : {
-    "all" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32 ],
-    "css" : [ 0, 1, 2, 3, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20, 22, 24, 25, 26, 27, 28, 30, 31 ],
+    "all" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33 ],
+    "css" : [ 0, 1, 2, 3, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20, 22, 24, 25, 26, 27, 28, 30, 31, 33 ],
     "javascript" : [ 1, 15, 17, 18, 22, 23, 25, 26, 28, 31, 32 ],
-    "jQuery" : [ 1, 4, 5, 6, 8, 9, 10, 13, 14, 15, 18, 19, 20, 21, 24, 27, 29, 30 ],
+    "jQuery" : [ 1, 4, 5, 6, 8, 9, 10, 13, 14, 15, 18, 19, 20, 21, 24, 27, 29, 30, 33 ],
     "bootstrap": [ 6, 8, 10, 14, 16, 20, 29 ],
     "ajax": [ 10, 29 ],
     "responsive": [ 6, 8, 10, 14, 16, 17, 19, 20, 21, 22, 24, 27, 28, 29 ]
