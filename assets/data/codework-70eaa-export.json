@@ -244,14 +244,21 @@
     "tags" : [ "css", "scss", "jQuery", "es6", "ajax", "api" ],
     "title" : "Show the local weather",
     "url" : "https://pamcy.github.io/50Websites/35-show-local-weather"
+  }, {
+    "desc" : "I really like the video that playing on header at old Airbnb's website, so I try to make a video background as Airbnb, with layout `Flexbox` and CSS property `object-fit` to get a full page video, nice!",
+    "id" : 35,
+    "image" : "/assets/img/code-work/36-airbnb-video-header.png",
+    "tags" : [ "css", "scss", "flexbox" ],
+    "title" : "Airbnb style video header",
+    "url" : "https://pamcy.github.io/50Websites/36-airbnb-video-header"
   }],
   "urlTags" : {
-    "all" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34 ],
-    "css" : [ 0, 1, 2, 3, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20, 22, 24, 25, 26, 27, 28, 30, 31, 33, 34 ],
+    "all" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35 ],
+    "css" : [ 0, 1, 2, 3, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20, 22, 24, 25, 26, 27, 28, 30, 31, 33, 34, 35 ],
     "javascript" : [ 1, 15, 17, 18, 22, 23, 25, 26, 28, 31, 32, 34 ],
     "jQuery" : [ 1, 4, 5, 6, 8, 9, 10, 13, 14, 15, 18, 19, 20, 21, 24, 27, 29, 30, 33, 34 ],
     "bootstrap": [ 6, 8, 10, 14, 16, 20, 29 ],
     "ajax": [ 10, 29, 34 ],
-    "responsive": [ 6, 8, 10, 14, 16, 17, 19, 20, 21, 22, 24, 27, 28, 29, 34 ]
+    "responsive": [ 6, 8, 10, 14, 16, 17, 19, 20, 21, 22, 24, 27, 28, 29, 34, 35 ]
   }
 }
