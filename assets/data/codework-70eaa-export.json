@@ -254,7 +254,7 @@
   }, {
     "desc" : "Catch the latest popular videos on Youtube from around the world. What did I learn from this project: Webpack, Postcss, Youtube API, dropdown, modal popup, to top button and file structure.",
     "id" : 36,
-    "image" : "/assets/img/code-work/37-popular-youtube-video",
+    "image" : "/assets/img/code-work/37-popular-youtube-video.png",
     "tags" : [ "javascript", "webpack", "postcss", "gulp", "api", "ajax" ],
     "title" : "What's Happening Around The World Today?",
     "url" : "https://pamcy.github.io/50Websites/37-youtube-popular-videos/"
