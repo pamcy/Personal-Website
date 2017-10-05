@@ -126,7 +126,6 @@ $(function(){
         $(this).addClass('filter-btn-isActive');
 
         currentFilterValue = this.value;
-        $('.code-work').empty();
         loadMoreBtnObj.setPage(0); // Page number set to 0
         currentDisplayCollections = []; // 和前次選則不同，清除資料暫存包
         filter(this.value);
