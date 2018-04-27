@@ -283,17 +283,24 @@
     "desc" : "Click on the middle of the circle to draw the lottery. With JS functions to complete the whole operation, including animated progressive movement, speed controll in each step, final prize position and congratulations modal.",
     "id" : 40,
     "image" : "/assets/img/code-work/41-lotto-prize.gif",
-    "tags" : [ "javascript", "CSS Grid" ],
+    "tags" : [ "javascript", "css grid" ],
     "title" : "41 - Lotto Prize Generator",
     "url" : "https://pamcy.github.io/50Websites/41-lotto-prize-generator/"
+  }, {
+    "desc" : "I generate these gallery images with javascript, it's going to span the random number columns or rows I gave with CSS Grid. As wide as the gallery gets, these items sort of just fit into each other.",
+    "id" : 41,
+    "image" : "/assets/img/code-work/42-css-grid-gallery.gif",
+    "tags" : [ "css grid", "responsive", "javascript", "es6" ],
+    "title" : "42 - CSS Grid Image Gallery With Overlay",
+    "url" : "https://pamcy.github.io/50Websites/42-css-grid-image-gallery/"
   }],
   "urlTags" : {
-    "all" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40 ],
-    "css" : [ 0, 1, 2, 3, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20, 22, 24, 25, 26, 27, 28, 30, 31, 33, 34, 35, 36, 37, 38 ],
-    "javascript" : [ 1, 15, 17, 18, 22, 23, 25, 26, 28, 31, 32, 34, 36, 39, 40 ],
+    "all" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41 ],
+    "css" : [ 0, 1, 2, 3, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20, 22, 24, 25, 26, 27, 28, 30, 31, 33, 34, 35, 36, 37, 38, 41 ],
+    "javascript" : [ 1, 15, 17, 18, 22, 23, 25, 26, 28, 31, 32, 34, 36, 39, 40, 41 ],
     "jQuery" : [ 1, 4, 5, 6, 8, 9, 10, 13, 14, 15, 18, 19, 20, 21, 24, 27, 29, 30, 33, 34, 36, 37, 38, 40],
     "bootstrap": [ 6, 8, 10, 14, 16, 20, 29 ],
     "ajax": [ 10, 29, 34, 36 ],
-    "responsive": [ 6, 8, 10, 14, 16, 17, 19, 20, 21, 22, 24, 27, 28, 29, 34, 35, 36, 37, 38 ]
+    "responsive": [ 6, 8, 10, 14, 16, 17, 19, 20, 21, 22, 24, 27, 28, 29, 34, 35, 36, 37, 38, 41 ]
   }
 }
