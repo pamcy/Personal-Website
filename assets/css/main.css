@@ -75,7 +75,8 @@ ul {
 }
 
 main {
-    overflow: auto;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
 }
 
 section:not(:last-of-type) {
