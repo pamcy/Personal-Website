@@ -304,7 +304,7 @@
     "desc" : "I love movies, it's the most interesting project I've ever done! Using latest Javascript ES6, along with promise, async and await to fetch multiple APIs and display movie information in parallel.",
     "id" : 43,
     "image" : "/assets/img/code-work/45-moviebuddy.gif",
-    "tags" : [ "es6", "api", "promise", "async await", "responsive" ],
+    "tags" : [ "es6", "api", "promise", "async await", "lazyloading", "responsive" ],
     "title" : "44 - MovieBuddy: Discover and find your favorite movies",
     "url" : "https://pamcy.github.io/50Websites/45-movie-app/"
   }],
