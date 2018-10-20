@@ -307,11 +307,18 @@
     "tags" : [ "es6", "api", "promise", "async await", "lazyloading", "responsive" ],
     "title" : "44 - MovieBuddy: Discover and find your favorite movies",
     "url" : "https://pamcy.github.io/50Websites/45-movie-app/"
+  }, {
+    "desc" : "Click navigation buttons to move the carousel and also the background position of scooter, or simply edit SETTINGS if you want more personalized content.",
+    "id" : 44,
+    "image" : "/assets/img/code-work/46-demo-moving-spotlight.gif",
+    "tags" : [ "carousel", "background position", "es6" ],
+    "title" : "45 - Carousel with Moving Spotlight on Scooter",
+    "url" : "https://pamcy.github.io/50Websites/46-carousel-with-moving-spotlight/"
   }],
   "urlTags" : {
-    "all" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43 ],
+    "all" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44 ],
     "css" : [ 0, 1, 2, 3, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20, 22, 24, 25, 26, 27, 28, 30, 31, 33, 34, 35, 36, 37, 38, 41, 42, 43 ],
-    "javascript" : [ 1, 15, 17, 18, 22, 23, 25, 26, 28, 31, 32, 34, 36, 39, 40, 41, 43 ],
+    "javascript" : [ 1, 15, 17, 18, 22, 23, 25, 26, 28, 31, 32, 34, 36, 39, 40, 41, 43, 44 ],
     "jQuery" : [ 1, 4, 5, 6, 8, 9, 10, 13, 14, 15, 18, 19, 20, 21, 24, 27, 29, 30, 33, 34, 36, 37, 38, 40],
     "bootstrap": [ 6, 8, 10, 14, 16, 20, 29 ],
     "ajax": [ 10, 29, 34, 36, 43 ],
