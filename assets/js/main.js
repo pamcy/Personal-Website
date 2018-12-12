@@ -182,6 +182,9 @@ function changeSubject() {
 // Document Ready
 // --------------------------------------
 $(document).ready(function() {
+    // Sentry
+    Sentry.init({ dsn: 'https://6a172be791844a3fa7cbad173c4114d9@sentry.io/1342430' });
+
     // Check if user on mobile device
     isMobileDevice();
 
