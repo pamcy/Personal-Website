@@ -321,11 +321,25 @@
     "tags" : [ "slider", "transform", "es6" ],
     "title" : "46 - Before After Split Screen Slider",
     "url" : "https://codepen.io/pamcy/full/gZLxBp"
+  }, {
+    "desc" : "It was fun doing these zooming / transition effects across the screen with GSAP, I even learned how to make a running progress indicator for loading next scene.",
+    "id" : 46,
+    "image" : "/assets/img/code-work/48-border-zooming-slideshow.png",
+    "tags" : [ "slideshow", "gsap", "es6" ],
+    "title" : "47 - Border-zooming Slideshow",
+    "url" : "https://codepen.io/pamcy/full/rodgjv"
+  }, {
+    "desc" : "I was super amazed by this incredible work by the team behind Epicurrence, so I took some time read the source code and try to rebuild it.",
+    "id" : 47,
+    "image" : "/assets/img/code-work/49-recreate-yosemite-epicurrence-parallax.png",
+    "tags" : [ "parallax", "gsap", "scrollmagic" ],
+    "title" : "48 - Recreate Yosemite Epicurrence Parallax",
+    "url" : "https://codepen.io/pamcy/full/mjRoGd"
   }],
   "urlTags" : {
-    "all" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45 ],
-    "css" : [ 0, 1, 2, 3, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20, 22, 24, 25, 26, 27, 28, 30, 31, 33, 34, 35, 36, 37, 38, 41, 42, 43, 45 ],
-    "javascript" : [ 1, 15, 17, 18, 22, 23, 25, 26, 28, 31, 32, 34, 36, 39, 40, 41, 43, 44, 45 ],
+    "all" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47 ],
+    "css" : [ 0, 1, 2, 3, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20, 22, 24, 25, 26, 27, 28, 30, 31, 33, 34, 35, 36, 37, 38, 41, 42, 43, 45, 46, 47 ],
+    "javascript" : [ 1, 15, 17, 18, 22, 23, 25, 26, 28, 31, 32, 34, 36, 39, 40, 41, 43, 44, 45, 46, 47 ],
     "jQuery" : [ 1, 4, 5, 6, 8, 9, 10, 13, 14, 15, 18, 19, 20, 21, 24, 27, 29, 30, 33, 34, 36, 37, 38, 40],
     "bootstrap": [ 6, 8, 10, 14, 16, 20, 29 ],
     "ajax": [ 10, 29, 34, 36, 43 ],
