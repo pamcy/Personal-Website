@@ -335,11 +335,18 @@
     "tags" : [ "parallax", "gsap", "scrollmagic" ],
     "title" : "48 - Recreate Yosemite Epicurrence Parallax",
     "url" : "https://codepen.io/pamcy/full/mjRoGd"
+  }, {
+    "desc" : "It was the first time I created SVG stars with javascript. The most cool part is to make flames look more natural, and the whole animation is called constantly with requestAnimationFrame.",
+    "id" : 48,
+    "image" : "/assets/img/code-work/50-flying-space-rockets.gif",
+    "tags" : [ "svg", "requestAnimationFrame", "anime.js" ],
+    "title" : "50 - Flying space rockets",
+    "url" : "https://codepen.io/pamcy/full/xyYYBd"
   }],
   "urlTags" : {
-    "all" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47 ],
+    "all" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48 ],
     "css" : [ 0, 1, 2, 3, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20, 22, 24, 25, 26, 27, 28, 30, 31, 33, 34, 35, 36, 37, 38, 41, 42, 43, 45, 46, 47 ],
-    "javascript" : [ 1, 15, 17, 18, 22, 23, 25, 26, 28, 31, 32, 34, 36, 39, 40, 41, 43, 44, 45, 46, 47 ],
+    "javascript" : [ 1, 15, 17, 18, 22, 23, 25, 26, 28, 31, 32, 34, 36, 39, 40, 41, 43, 44, 45, 46, 47, 48 ],
     "jQuery" : [ 1, 4, 5, 6, 8, 9, 10, 13, 14, 15, 18, 19, 20, 21, 24, 27, 29, 30, 33, 34, 36, 37, 38, 40],
     "bootstrap": [ 6, 8, 10, 14, 16, 20, 29 ],
     "ajax": [ 10, 29, 34, 36, 43 ],
