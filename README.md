@@ -1,4 +1,4 @@
-# Source Code of Pamcy.net
+# Source Code of Pamcy.dev
 
 This is a One-Page Mobile First website I built hosted on GitHub Pages, everything here are `HTML, CSS and JSS`.  
 
